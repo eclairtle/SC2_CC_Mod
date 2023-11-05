@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="CCPerceptionScrambler" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\Raven_Scrambler_Missile_MP_Debuff\Raven_Scrambler_Missile_MP_Debuff.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="CCHyperionLaserBatteryLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\BattlecruiserPlasmaMissile\BattlecruiserPlasmaMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CCHyperionAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\BattlecruiserMissileImpact\BattleCruiserMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="BattlecruiserAirAttackImpact"/>
+    </CModel>
+    <CModel id="CCVoidDomainInstantKillImpact">
+        <Model value="Assets\Effects\Protoss\Alarak_COOP_Sacrifice_Impact\Alarak_COOP_Sacrifice_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="CCSpeedAtkBoostBuff" parent="BuffFX">
+        <Model value="Assets\Effects\Terran\CobraZapBuff\CobraZapBuff.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value=""/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="CCHyperion" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Terran\BattlecruiserHyperion\BattlecruiserHyperion.m3"/>
+        <Events>
+            <Anim value="Stand,Work"/>
+            <Name value="Hyperion_StandWork"/>
+            <Type value="Sound"/>
+            <Attachment value="Ref_Center"/>
+            <Payload value="Hyperion_OrbitalDrop"/>
+        </Events>
+        <Flags index="AutoUnload" value="1"/>
+        <Radius value="2.500000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.950000"/>
+        <SelectionRadius value="1.666200"/>
+        <ShadowRadius value="1.666200"/>
+    </CModel>
+    <CModel id="CCVoidDomainAura">
+        <Model value="Assets\Doodads\TheVoid_DeathCloud\TheVoid_DeathCloud.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.250000,0.250000,0.600000"/>
+        <ScaleMin value="0.250000,0.250000,0.600000"/>
+    </CModel>
+    <CModel id="CCVoidDomainCreation">
+        <Model value="Assets\Units\Neutral\Void_DeathGripCrystal\Void_DeathGripCrystal.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="CCCollapsalLight" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\PurifyLaunch\PurifyLaunch.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="CCInfestationModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Infestation\Infestation.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Events>
+            <Anim value="Birth"/>
+            <Name value="Zerg_BuildingMorphStart"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Zerg_BuildingMorphStart"/>
+        </Events>
+        <Lighting value="ContaminateModel"/>
+    </CModel>
+    <CModel id="InterceptorHitTest">
+        <Model value="Assets\Units\Test\HitTestSphere\HitTestSphere.m3"/>
+    </CModel>
+    <CModel id="NuclearAnnihilationMengskBigNukeRSExplode" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <AnimSpeed value="0.500000"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="NukeBig_Mengsk_FireCloud"/>
+            <Type value="Sound"/>
+            <Time value="0.343000"/>
+            <Payload value="NukeBig_Mengsk_FireCloud"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="NukeBig_Mengsk_FireCloud_Sweet"/>
+            <Type value="Sound"/>
+            <Time value="1.105000"/>
+            <Payload value="NukeBig_Mengsk_FireCloud_Sweet"/>
+        </Events>
+        <Lighting value="NuclearAnnihilationMengskBigNukeExplode"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="2.600000,2.600000,2.600000"/>
+        <ScaleMin value="2.600000,2.600000,2.600000"/>
+    </CModel>
+    <CModel id="VoidDomainLoadedGlaze" parent="Glaze">
+        <Model value="Assets\Effects\Glaze\Glaze_VoidStasis\Glaze_VoidStasis.m3"/>
+    </CModel>
+    <CModel id="OdinCalldownDrop" parent="RaceImpactFX" Race="Other">
+        <Model value="Assets\Effects\Protoss\SOA_OrbitalStrike_Missile_Upgrade\SOA_OrbitalStrike_Missile_Upgrade.m3"/>
+    </CModel>
+    <CModel id="OdinNukeExplode" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="GhostNukeExplode"/>
+        <RadiusLoose value="1.000000"/>
+        <ScaleMax value="1.300000,1.300000,1.300000"/>
+        <ScaleMin value="1.300000,1.300000,1.300000"/>
+    </CModel>
+    <CModel id="HandofInfinityImpact">
+        <Model value="Assets\Effects\Zerg\MendImpact\MendImpact.m3"/>
+        <ScaleMax value="0.300000,0.300000,0.300000"/>
+        <ScaleMin value="0.300000,0.300000,0.300000"/>
+    </CModel>
+    <CModel id="OdinCalldownImpact" parent="RaceImpactFX" Race="Other">
+        <Model value="Assets\Effects\Protoss\SOA_OrbitalStrike_Impact_Upgrade\SOA_OrbitalStrike_Impact_Upgrade.m3"/>
+    </CModel>
+    <CModel id="CCOriginiumShockwaveImpact">
+        <Model value="Assets\Effects\Protoss\Void_Narud_Psionic_Shock_Wave\Void_Narud_Psionic_Shock_Wave.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+    </CModel>
+    <CModel id="RSNukeExplode" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\Nuke\Nuke.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Lighting value="HeroNukeExplode"/>
+        <ScaleMax value="2.400000,2.400000,2.400000"/>
+        <ScaleMin value="2.200000,2.200000,2.200000"/>
+        <AnimSpeed value="0.500000"/>
+    </CModel>
+    <CModel id="CCHyperionBlinkModelIn" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\HyperionTeleportIn\HyperionTeleportIn.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Lighting value="Hyperion-3"/>
+        <Radius value="2.500000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionLayer value="2"/>
+        <SelectionOffset value="0.000000,0.000000,-0.950000"/>
+        <SelectionRadius value="1.666200"/>
+        <ShadowRadius value="1.666200"/>
+    </CModel>
+    <CModel id="CCHyperionBlinkModelOut" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\HyperionTeleportOut\HyperionTeleportOut.m3"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Lighting value="Hyperion-3"/>
+        <Radius value="2.500000"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+        <SelectionLayer value="2"/>
+        <SelectionOffset value="0.000000,0.000000,-0.950000"/>
+        <SelectionRadius value="1.666200"/>
+        <ShadowRadius value="1.666200"/>
+    </CModel>
+    <CModel id="SurviverPactAura" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\Void_Kerrigan_QuantumRay_Charge\Void_Kerrigan_QuantumRay_Charge.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="ChronoCWAL" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\TimeWarpImpact\TimeWarpImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="CCBurrowAmbush" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Zagara_MassFrenzy_State\Zagara_MassFrenzy_State.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+</Catalog>

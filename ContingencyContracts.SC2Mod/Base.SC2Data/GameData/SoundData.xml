@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="CCShockwaveRoar" parent="Spell">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Zerg\Hybrid\Hybrid_StealStrengthCast0.wav" FacialGroup=""/>
+        <DupeDestroyCount value="5"/>
+        <Pitch value="3.000000,3.000000"/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="CCAttackBoostSound" parent="Spell">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\b_char_atkboost.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="CalldownOdin" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_DropPodImpact2.wav" FacialGroup=""/>
+        <DupeHistoryCount value="5"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="CalldownOdinImpact" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Explosions\Terran_ExplosionMedium9.wav" FacialGroup=""/>
+        <DupeHistoryCount value="5"/>
+        <DupeMuteCount value="3"/>
+    </CSound>
+    <CSound id="CCSalvage" parent="UI">
+        <AssetArray File="Assets\Sounds\Uni\UI\UI_NewUnitAcquired.wav"/>
+        <DupeDestroyCount value="3"/>
+    </CSound>
+    <CSound id="CCVoidDomainCreation" parent="Shuttle_Load">
+        <Pitch value="-4.000000,-2.000000"/>
+        <Volume value="0.000000,0.000000"/>
+    </CSound>
+</Catalog>

@@ -1,0 +1,4751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="CCBonusObjectives"/>
+    <CUser id="CCEnemyFactionUnitMappings">
+        <Fields Id="Source Unit" Type="Unit" EditorColumn="1"/>
+        <Fields>
+            <Id value="Target Unit"/>
+            <Type value="Unit"/>
+            <Count value="10"/>
+            <EditorColumn value="2"/>
+        </Fields>
+        <Fields>
+            <Id value="Require Contract"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="10"/>
+            <EditorColumn value="3"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Zealot">
+            <Unit Unit="Zealot">
+                <Field Id="Source Unit"/>
+            </Unit>
+            <Unit Unit="ZealotPurifier">
+                <Field Id="Target Unit"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCGameplayElements">
+        <Fields>
+            <Id value="Contracts"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="10"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="And/Or" Type="Int" EditorColumn="1"/>
+        <Fields Id="State" Type="Int">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Negate" Type="Int" EditorColumn="2"/>
+        <Instances Id="[Default]"/>
+    </CUser>
+    <CUser id="CCRandomizerAirUnits">
+        <Fields Id="Tier" Type="Int" EditorColumn="1"/>
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="30"/>
+            <EditorColumn value="3"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Unit count" Type="Int" EditorColumn="2">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Readysound" Type="Sound" Count="30">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="t1_scourge">
+            <Int Int="1">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Scourge">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="LocustFlying">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Observer">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="CCInterceptor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="FlyingZergling">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t2_150">
+            <Int Int="2">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Wraith">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Mutalisk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Overlord">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="CCGriffon">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="CCGriffon">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t3_bwqueen">
+            <Int Int="3">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="QueenClassic">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="VikingFighter">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Mutalisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Wraith">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="PrimalMutalisk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Medivac">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="MothershipCore">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t4_phoenix">
+            <Int Int="4">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Mutalisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Phoenix">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="VikingFighter">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Wraith">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Corruptor">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Banshee">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Overseer">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="WarpPrism">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t5_oracle">
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Tier"/>
+            </Int>
+            <Unit Unit="Phoenix">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="VikingFighter">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Corruptor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Banshee">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="PhoenixPurifier">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Oracle">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Viper">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t6_scout">
+            <Int Int="6">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Scout">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Raven">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ScienceVessel">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="PrimalFlyer">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Guardian">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Liberator">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t7_voidray">
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Tier"/>
+            </Int>
+            <Unit Unit="VoidRay">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="PrimalFlyer">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Guardian">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Corruptor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="VoidRayTaldarim">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t8_broodlord">
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Tier"/>
+            </Int>
+            <Unit Unit="BroodLord">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="VoidRayTaldarim">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="VoidRay">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Raven">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t9_hercules">
+            <Int Int="9">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Hercules">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="BroodLord">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="VoidRay">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Viper">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t10_carrier">
+            <Int Int="10">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Carrier">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="BroodLord">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="ArbiterMP">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t11_carrieraiur">
+            <Int Int="11">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="CarrierAiur">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t12_morecarrier">
+            <Int Int="12">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="CarrierAiur">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="ArbiterMP">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t13_battlecruiser">
+            <Int Int="13">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="CarrierAiur">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t14_moreBC">
+            <Int Int="14">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="BroodLord">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t15_mothership">
+            <Int Int="15">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Mothership">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ArbiterMP">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="BroodLord">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t16_mothership2">
+            <Int Int="16">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Mothership">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t17_airhybrid">
+            <Int Int="17">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HybridNemesis">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="CarrierAiur">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t18_airhybrid2">
+            <Int Int="18">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HybridNemesis">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t19_airhybrid3">
+            <Int Int="19">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HybridNemesis">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Mothership">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="CarrierAiur">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t20_leviathan">
+            <Int Int="20">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HotSLeviathan">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HybridNemesis">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t21_leviathan2">
+            <Int Int="21">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HotSLeviathan">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="BroodLord">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t22_taldmothership">
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Int Int="22">
+                <Field Id="Tier"/>
+            </Int>
+            <Unit Unit="Mothership">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SOAMothershipv4">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HotSLeviathan">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t23_taldmothership2">
+            <Int Int="23">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="SOAMothershipv4">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HotSLeviathan">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCRandomizerGroundUnits">
+        <Fields Id="Tier" Type="Int" EditorColumn="1"/>
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="30"/>
+            <EditorColumn value="3"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Unit count" Type="Int" EditorColumn="2">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Readysound" Type="Sound" Count="30">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="t1_zergling">
+            <Int Int="1">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Sound Sound="Zergling_Ready">
+                <Field Id="Readysound"/>
+            </Sound>
+            <Unit Unit="Zergling">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ZerglingCarbot">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HotSRaptor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="KerriganInfestBroodling">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Roachling">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="CCCivilian">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="CCCivilianFemale">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="InfestedCivilian">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t2_marine">
+            <Int Int="2">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Marine">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Baneling">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HotSSplitterlingBig">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="SpaceCowSmall">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="HotSRaptor">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="UmojanLabMicrobot">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Pygalisk">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="InfestedTerranCampaign">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="Medic">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t3_vulture">
+            <Int Int="3">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Vulture">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Marine">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HotSHunter">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Zealot">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Reaper">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="MitosaurusB">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hellion">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Roach">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="Yeti">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t4_hellion">
+            <Int Int="4">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Hellion">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Zealot">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ZealotAiur">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="ZealotShakuras">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Firebat">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="HellionTank">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Reaper">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Roach">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="WidowMine">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t5_marauder">
+            <Int Int="5">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Firebat">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Marauder">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Medic">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hydralisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="ZealotPurifier">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="RoachCorpser">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="RoachVile">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="HERC">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="ColonistTransport">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t6_hydralisk">
+            <Int Int="6">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Hydralisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Adept">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Queen">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Predator">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="SentryAiur">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="SentryPurifier">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Monitor">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Medic">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t7_stalker">
+            <Int Int="7">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Adept">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Stalker">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Dragoon">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="StalkerPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Mitosaurus">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Goliath">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Predator">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="Medic">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t8_ravager">
+            <Int Int="8">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Ravager">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="StalkerPurifier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="DarkTemplar">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="InfestedAbomination">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Diamondback">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Goliath">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Marauder">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t9_warhound">
+            <Int Int="9">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="VikingAssault">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Cyclone">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="WarHound">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Diamondback">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="GiantYeti">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Ravasaur">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="VikingAssault">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t10_cyclone">
+            <Int Int="10">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Cyclone">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SwarmHost">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="WarHound">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Diamondback">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="DarkTemplar">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="HighTemplar">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t11_siegetank">
+            <Int Int="11">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="YetiMomma">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Immortal">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="InfestedAbomination">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="DarkTemplarShakuras">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="DarkTemplarTaldarim">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t12_ghost">
+            <Int Int="12">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Ghost">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Spectre">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Infestor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HighTemplarTaldarim">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="HighTemplar">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="DefilerMP">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t13_lurker">
+            <Int Int="13">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Lurker">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Impaler">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ImmortalAiur">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Ghost">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Spectre">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t14_immortal">
+            <Int Int="14">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Immortal">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ImmortalTaldarim">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ImmortalShakuras">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="SwarmHostSplitA">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="SwarmHostSplitB">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="SwarmHost">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t15_disruptor">
+            <Int Int="15">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Disruptor">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ImmortalTaldarim">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="DarkTemplarShakuras">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Archon">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="ImmortalShakuras">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="DarkArchon">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Disruptor">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Infestor">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t16_archon">
+            <Int Int="16">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Archon">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="DarkArchon">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Infestor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Disruptor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Immortal">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="ImmortalAiur">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Archon">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="ImmortalShakuras">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t17_darkarchon">
+            <Int Int="17">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="DarkArchon">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Disruptor">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="ImmortalTaldarim">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="GiantYeti">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="HighTemplar">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t18_cheapultra">
+            <Int Int="18">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Archon">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="GiantYeti">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Mitosaurus">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Ravasaur">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Lurker">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Impaler">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t19_cheapcolossus">
+            <Int Int="19">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Colossus">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Archon">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Reaver">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="DarkArchon">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="ColossusTaldarim">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t20_thor">
+            <Int Int="20">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Thor">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Reaver">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="ColossusPurifier">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="HotSNoxious">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="ColossusTaldarim">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t21_betterultra">
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Int Int="21">
+                <Field Id="Tier"/>
+            </Int>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HotSNoxious">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Reaver">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="HotSTorrasque">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t22_bettercolossus">
+            <Int Int="22">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="ColossusPurifier">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ColossusTaldarim">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HotSNoxious">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HotSTorrasque">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t23_morecolossus">
+            <Int Int="23">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ColossusPurifier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ColossusTaldarim">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HotSTorrasque">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="HotSNoxious">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t24_eradicator">
+            <Int Int="24">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t25_hyrbids">
+            <Int Int="25">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HybridDestroyer">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HybridReaver">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t26_morehybrids">
+            <Int Int="26">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HybridDestroyer">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HybridReaver">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Reaver">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t27_capitalships">
+            <Int Int="27">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Tempest">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="TempestPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t28_capsandhybrids">
+            <Int Int="28">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HybridReaver">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HybridDestroyer">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t29_ares">
+            <Int Int="29">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="AresNapalm">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="AresMissile">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="AresGun">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="CCCivilian">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="CCCivilianFemale">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t30_moreares">
+            <Int Int="30">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="AresNapalm">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="AresMissile">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="AresGun">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t31_moremoreares">
+            <Int Int="31">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="AresNapalm">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="AresMissile">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="AresGun">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Reaver">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="ColossusPurifier">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="HotSTorrasque">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t32_brutares">
+            <Int Int="32">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="AresNapalm">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="AresMissile">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="AresGun">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="UmojanLabWarbot">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t33_cheapbrutalisk">
+            <Int Int="33">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Ghost">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t34_brutalisk">
+            <Int Int="34">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t35_morebrutalisk">
+            <Int Int="35">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="t36_ bigred">
+            <Int Int="36">
+                <Field Id="Tier"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Unit count"/>
+            </Int>
+            <Unit Unit="HybridBehemoth">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Hercules">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Brutalisk">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCSameUnitTypeList">
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="15"/>
+            <EditorColumn value="1"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Marine">
+            <Unit Unit="Marine">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="WarPig">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="firebat">
+            <Unit Unit="DevilDog">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Firebat">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Marauder">
+            <Unit Unit="HammerSecurity">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Marauder">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Goliath">
+            <Unit Unit="Goliath">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SpartanCompany">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="SiegeTank">
+            <Unit Unit="SiegeTank">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SiegeTankSieged">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="SiegeBreaker">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="SiegeBreakerSieged">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="viking">
+            <Unit Unit="VikingFighter">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="VikingAssault">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HelsAngelAssault">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HelsAngelFighter">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Battlecruiser">
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="DukesRevenge">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Banshee">
+            <Unit Unit="DuskWing">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Banshee">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="MengskSiegeTank">
+            <Unit Unit="SiegeTankMengskSieged">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SiegeTankMengsk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="mengskviking">
+            <Unit Unit="VikingMengskAssault">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="VikingMengskFighter">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Thor">
+            <Unit Unit="Thor">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ThorAP">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="mengskthor">
+            <Unit Unit="ThorMengskSieged">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ThorMengsk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Liberator">
+            <Unit Unit="Liberator">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="LiberatorAG">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="ultralisk">
+            <Unit Unit="Ultralisk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="UltraliskMengsk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="HotSNoxious">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="HotSTorrasque">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCTrainAbilityList">
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="6"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Ability Command"/>
+            <Type value="AbilCmd"/>
+            <Count value="6"/>
+            <EditorColumn value="2"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Zergling">
+            <AbilCmd Abil="LarvaTrainSwarm" Cmd="9">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="LarvaTrainSwarmling">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <AbilCmd Abil="LarvaTrainSwarm" Cmd="6">
+                <Field Id="Ability Command" Index="2"/>
+            </AbilCmd>
+            <AbilCmd Abil="LarvaTrain" Cmd="1">
+                <Field Id="Ability Command" Index="3"/>
+            </AbilCmd>
+            <Unit Unit="HotSSwarmling">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HotSRaptor">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Zergling">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Marine">
+            <AbilCmd Abil="BarracksTrain">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Unit Unit="Marine">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="WarPig">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Zealot">
+            <AbilCmd Abil="GatewayTrain">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="WarpGateTrain">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Unit Unit="Zealot">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ZealotAiur">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="ZealotShakuras">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="ZealotPurifier">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCUnitCategories">
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="30"/>
+            <EditorColumn value="1"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Production">
+            <Unit Unit="Barracks">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="BarracksFlying">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="BarracksMengsk">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="BarracksMengskFlying">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="Factory">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="FactoryFlying">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="FactoryMengsk">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="FactoryMengskFlying">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="StarportMengsk">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+            <Unit Unit="StarportMengskFlying">
+                <Field Id="Units" Index="9"/>
+            </Unit>
+            <Unit Unit="Starport">
+                <Field Id="Units" Index="10"/>
+            </Unit>
+            <Unit Unit="StarportFlying">
+                <Field Id="Units" Index="11"/>
+            </Unit>
+            <Unit Unit="Gateway">
+                <Field Id="Units" Index="12"/>
+            </Unit>
+            <Unit Unit="WarpGate">
+                <Field Id="Units" Index="13"/>
+            </Unit>
+            <Unit Unit="RoboticsFacility">
+                <Field Id="Units" Index="14"/>
+            </Unit>
+            <Unit Unit="Stargate">
+                <Field Id="Units" Index="15"/>
+            </Unit>
+            <Unit Unit="RoboticsFacilityWarp">
+                <Field Id="Units" Index="16"/>
+            </Unit>
+            <Unit Unit="StargateWarp">
+                <Field Id="Units" Index="17"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCWeatherConditions">
+        <Fields>
+            <Id value="Associated Behavior"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Behavior"/>
+            <EditorColumn value="4"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Duration" Type="Fixed" EditorColumn="2">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Cooldown" Type="Fixed" EditorColumn="3">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Contract"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="ToggleState" Type="Int" EditorColumn="5">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Player Upgrades"/>
+            <Type value="Upgrade"/>
+            <Count value="5"/>
+            <EditorColumn value="6"/>
+        </Fields>
+        <Fields>
+            <Id value="Enemy Upgrades"/>
+            <Type value="Upgrade"/>
+            <Count value="5"/>
+            <EditorColumn value="7"/>
+        </Fields>
+        <Fields>
+            <Id value="SpecialFlags"/>
+            <Type value="Int"/>
+            <Count value="5"/>
+            <EditorColumn value="8"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Name" Type="Text"/>
+        <Fields Id="Description" Type="Text">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Great Silence">
+            <Fixed Fixed="120">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <Fixed Fixed="60">
+                <Field Id="Duration"/>
+            </Fixed>
+            <GameLink GameLink="GreatSilence">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/Great Silence_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/Great Silence_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="GreatSilence 3">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="BlackUnit">
+            <Fixed Fixed="30">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <Fixed Fixed="120">
+                <Field Id="Duration"/>
+            </Fixed>
+            <GameLink GameLink="CCPerceptionScrambler">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/BlackUnit_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/BlackUnit_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="BlackUnit 2">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="FlashFreeze">
+            <Fixed Fixed="120">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <Fixed Fixed="60">
+                <Field Id="Duration"/>
+            </Fixed>
+            <GameLink GameLink="CCFlashFreeze">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/FlashFreeze_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/FlashFreeze_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Upgrade Upgrade="CCFlashFreezeActive">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="FlashFreeze 3">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="ContingencyContractClasses">
+        <Fields Id="Enabled" Type="Int" EditorColumn="2">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Name" Type="Text" EditorColumn="1">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Contracts"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="30"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Supports"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="20"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Tooltip" Type="Text" EditorColumn="3">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Strategic">
+            <Int Int="1">
+                <Field Id="Enabled"/>
+            </Int>
+            <Text Text="UserData/ContingencyContractClasses/Strategic_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/Strategic_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Enemy_HP 2">
+                <Field Id="Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Enemy_HP 3">
+                <Field Id="Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BlackCrown 3">
+                <Field Id="Supports" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Chrono CWAL 3">
+                <Field Id="Supports"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Enemy_Atk 2">
+                <Field Id="Contracts" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Enemy_Atk 3">
+                <Field Id="Contracts" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Deathless_2">
+                <Field Id="Contracts" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Deathless_5">
+                <Field Id="Contracts" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Enemyfast 2">
+                <Field Id="Contracts" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Supply_Down 2">
+                <Field Id="Contracts" Index="10"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Contracts" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Upgdown 2">
+                <Field Id="Contracts" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Pacifist 5">
+                <Field Id="Contracts" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Contracts" Index="15"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="HPdown2">
+                <Field Id="Contracts" Index="16"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="HPdown3">
+                <Field Id="Contracts" Index="17"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Supports" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="King Aspd 2">
+                <Field Id="Supports" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Gold Chalice4">
+                <Field Id="Supports" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="KineticBoost 2">
+                <Field Id="Supports" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Supports" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="InfEnergy 3">
+                <Field Id="Supports" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Surviver Pact 4">
+                <Field Id="Supports" Index="10"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Resource drain 2">
+                <Field Id="Contracts" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="18"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizer 2">
+                <Field Id="Contracts" Index="19"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizerbad 3">
+                <Field Id="Contracts" Index="20"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizergood 2">
+                <Field Id="Supports" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="ResourcePickup 2">
+                <Field Id="Supports" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+                <Field Id="Supports" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="TacArsenal 1">
+                <Field Id="Supports" Index="15"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="17"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="16"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_HPup">
+                <Field Id="Supports" Index="18"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_ATKup">
+                <Field Id="Supports" Index="19"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="21"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="EnemyWave 2">
+                <Field Id="Contracts" Index="22"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="EnemyWave 3">
+                <Field Id="Contracts" Index="23"/>
+            </User>
+        </Instances>
+        <Instances Id="Tactical">
+            <Int Int="1">
+                <Field Id="Enabled"/>
+            </Int>
+            <Text Text="UserData/ContingencyContractClasses/Tactical_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/Tactical_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="RS Nuke 2">
+                <Field Id="Supports"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Booster 1">
+                <Field Id="Supports" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+                <Field Id="Supports" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+                <Field Id="Supports" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Line Break">
+                <Field Id="Supports" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Calldown Hyperion 2">
+                <Field Id="Supports" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Nuke_follow 2">
+                <Field Id="Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Solarite 3">
+                <Field Id="Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Collapsal 3">
+                <Field Id="Contracts" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Calldown Odin 3">
+                <Field Id="Supports" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Orbital Drops 2">
+                <Field Id="Supports" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Vespene Effeciency I">
+                <Field Id="Supports" Index="10"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Reactors 1">
+                <Field Id="Supports" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Bullettime 2">
+                <Field Id="Supports" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+                <Field Id="Supports" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+                <Field Id="Supports" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="MengskTopbar 3">
+                <Field Id="Supports" Index="15"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="16"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Discount">
+                <Field Id="Supports" Index="17"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_StartResource">
+                <Field Id="Supports" Index="18"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="FlashFreeze 3">
+                <Field Id="Contracts" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="MonoBattle 3">
+                <Field Id="Contracts" Index="11"/>
+            </User>
+        </Instances>
+        <Instances Id="Emergency">
+            <Int Int="1">
+                <Field Id="Enabled"/>
+            </Int>
+            <Text Text="UserData/ContingencyContractClasses/Emergency_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/Emergency_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports"/>
+            </User>
+        </Instances>
+        <Instances Id="AllResearch">
+            <Text Text="UserData/ContingencyContractClasses/AllResearch_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/AllResearch_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="InstantArmory 1">
+                <Field Id="Supports"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="ObjProtection 1">
+                <Field Id="Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BlackUnit 2">
+                <Field Id="Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Fatal 4">
+                <Field Id="Supports" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="TimedVirus 3">
+                <Field Id="Contracts" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Thrasher 3">
+                <Field Id="Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="EnemyPurifier 3">
+                <Field Id="Contracts" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BurrowAmbush 2">
+                <Field Id="Contracts" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="NetherCreep 3">
+                <Field Id="Contracts" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BadLoad 3">
+                <Field Id="Contracts" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Solar Lance 3">
+                <Field Id="Contracts" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="GreatSilence 3">
+                <Field Id="Contracts" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Infestation 2">
+                <Field Id="Contracts" Index="10"/>
+            </User>
+        </Instances>
+        <Instances Id="TossResearch">
+            <Text Text="UserData/ContingencyContractClasses/TossResearch_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/TossResearch_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="ZergResearch">
+            <Text Text="UserData/ContingencyContractClasses/ZergResearch_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContractClasses/ZergResearch_Tooltip">
+                <Field Id="Tooltip"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="ContingencyContracts">
+        <Fields Id="Contract Name" Type="Text" EditorColumn="1">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Contract Level" Type="Int" EditorColumn="2">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Contract Type" Type="Int" EditorColumn="4">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Toggle State" Type="Int" EditorColumn="5">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Availability" Type="Int" EditorColumn="6">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Player Upgrades"/>
+            <Type value="Upgrade"/>
+            <Count value="5"/>
+            <EditorColumn value="9"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Description" Type="Text">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Require Contracts"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="5"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Turnoff Contracts"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="5"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Research Type" Type="Int" EditorColumn="7">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Enemy Upgrade"/>
+            <Type value="Upgrade"/>
+            <Count value="5"/>
+            <EditorColumn value="10"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Associated Behavior"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Behavior"/>
+            <EditorColumn value="8"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Associated Ability"/>
+            <Type value="GameLink"/>
+            <GameLinkType value="Abil"/>
+            <EditorColumn value="11"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields Id="Special Flags" Type="Int" Count="15"/>
+        <Fields Id="Require Element" Type="User" UserType="CCGameplayElements"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="Enemy_HP 2">
+            <GameLink GameLink="VitalizeII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_HP 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Enemy_HP 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Enemy_HP 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Enemy_HP 3">
+            <GameLink GameLink="VitalizeIII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_HP 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Enemy_HP 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Enemy_HP 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Enemy_Atk 2">
+            <GameLink GameLink="CCAggressionII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_Atk 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Enemy_Atk 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Enemy_Atk 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Enemy_Atk 3">
+            <GameLink GameLink="CCAggressionIII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_Atk 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Enemy_Atk 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Enemy_Atk 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Supply_Down 2">
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Supply_Down 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Supply_Down 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Nuke_follow 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Nuke_follow 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Nuke_follow 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Solarite 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Deathless_2">
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Deathless_2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Deathless_2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Deathless_5">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Deathless_5">
+            <Int Int="5">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Deathless_5_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Deathless_5_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Deathless_2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Speedrun_2">
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Speedrun_2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Speedrun_2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Speedrun_3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Speedrun_3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Speedrun_3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Speedrun_3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Speedrun_2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Upgdown 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Upgdown 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Upgdown 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Pacifist 5">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Pacifist 5">
+            <GameLink GameLink="PacifismEnemyDamageImmunity">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Pacifist 5_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Pacifist 5_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="ObjProtection 1">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="King Aspd 2">
+            <GameLink GameLink="CCKingsLance">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/King Aspd 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/King Aspd 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Fatal 4">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Fatal 4_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Fatal 4_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="RS Nuke 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/RS Nuke 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/RS Nuke 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="CCRSNuke">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Sandevistan 2">
+            <GameLink GameLink="CCSandevistan">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Sandevistan 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Sandevistan 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Booster 1">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Laevateinn 3">
+            <GameLink GameLink="Laevateinn">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Laevateinn 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Laevateinn 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Booster 1">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Enemy_HP txt">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_HP txt_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Enemy_ATK txt">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemy_ATK txt_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Line Break">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Type"/>
+            </Int>
+        </Instances>
+        <Instances Id="Calldown Hyperion 2">
+            <GameLink GameLink="CalldownHyperion">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Calldown Hyperion 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Calldown Hyperion 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Calldown Odin 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Calldown Odin 3">
+            <GameLink GameLink="CalldownOdin">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Calldown Odin 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Calldown Odin 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Calldown Hyperion 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Solarite 3">
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Solarite 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Solarite 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Nuke_follow 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Bullettime 2">
+            <GameLink GameLink="CCBulletTime">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Bullettime 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Bullettime 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Orbital Drops 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Orbital Drops 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Orbital Drops 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="OrbitalStrike">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <Upgrade Upgrade="SupplyDepotDrop">
+                <Field Id="Player Upgrades" Index="1"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Reactors 1">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Reactors 1_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Reactors 1_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="CommandCenterReactor">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <Upgrade Upgrade="TechReactor">
+                <Field Id="Player Upgrades" Index="1"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Vespene Effeciency I">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Vespene Effeciency I_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Vespene Effeciency I_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="MicroFiltering">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <Upgrade Upgrade="AutoHarvester">
+                <Field Id="Player Upgrades" Index="1"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="Gold Chalice4">
+            <GameLink GameLink="CCGoldenChalice">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Gold Chalice4_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Gold Chalice4_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="InfEnergy 3">
+            <GameLink GameLink="HandofInfinity">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/InfEnergy 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/InfEnergy 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Resource drain 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Resource drain 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Resource drain 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Booster 1">
+            <GameLink GameLink="CCAfterburners">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Booster 1_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Booster 1_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="KineticBoost 2">
+            <GameLink GameLink="CCSpeedAtkBooster">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/KineticBoost 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/KineticBoost 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Surviver Pact 4">
+            <GameLink GameLink="SurviversPactVeteran">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Surviver Pact 4_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Surviver Pact 4_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Chrono CWAL 3">
+            <GameLink GameLink="ChronoCWAL">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Chrono CWAL 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Chrono CWAL 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="InstSalvage 2">
+            <GameLink GameLink="CCInstantSalvage">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/InstSalvage 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/InstSalvage 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Bullettime 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="BlackCrown 3">
+            <GameLink GameLink="CCCivilightEterna">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/BlackCrown 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/BlackCrown 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="VoidDomain 3">
+            <GameLink GameLink="CCVoidDomain">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/VoidDomain 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/VoidDomain 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Bullettime 2">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Collapsal 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Collapsal 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Collapsal 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="HPdown2">
+            <GameLink GameLink="InitialFragilityII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/HPdown2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/HPdown2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="HPdown3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="HPdown3">
+            <GameLink GameLink="InitialFragilityIII">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/HPdown3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/HPdown3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="HPdown2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Enemyfast 2">
+            <GameLink GameLink="SubjectiveDilation">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Enemyfast 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Enemyfast 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Randomizer 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Randomizer 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Randomizer 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Randomizerbad 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizergood 2">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Randomizerbad 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Randomizerbad 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Randomizerbad 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Randomizer 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizergood 2">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Randomizergood 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Randomizergood 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Randomizergood 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Randomizer 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Randomizerbad 3">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="ResourcePickup 2">
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/ResourcePickup 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/ResourcePickup 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Dec_HPup">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Dec_HPup_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Dec_HPup_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Dec_Autocomplete">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Discount">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_ATKup">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_StartResource">
+                <Field Id="Turnoff Contracts" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Dec_ATKup">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Dec_ATKup_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Dec_ATKup_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Dec_HPup">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Discount">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_StartResource">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Autocomplete">
+                <Field Id="Turnoff Contracts" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Dec_StartResource">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Dec_StartResource_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Dec_StartResource_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Dec_Autocomplete">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Discount">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_ATKup">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_HPup">
+                <Field Id="Turnoff Contracts" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Dec_Discount">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Dec_Discount_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Dec_Discount_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Dec_ATKup">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Autocomplete">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_HPup">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_StartResource">
+                <Field Id="Turnoff Contracts" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Dec_Autocomplete">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Dec_Autocomplete_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Dec_Autocomplete_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Dec_ATKup">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_Discount">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_HPup">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Dec_StartResource">
+                <Field Id="Turnoff Contracts" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="InstantArmory 1">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Research Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/InstantArmory 1_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/InstantArmory 1_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="BlackUnit 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/BlackUnit 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/BlackUnit 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="ObjProtection 1">
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Research Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/ObjProtection 1_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/ObjProtection 1_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Pacifist 5">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Thrasher 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Thrasher 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Thrasher 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="TimedVirus 3">
+            <GameLink GameLink="VirusTimedLife">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/TimedVirus 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/TimedVirus 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="EnemyPurifier 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/EnemyPurifier 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/EnemyPurifier 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Upgrade Upgrade="CCEnemyPurifierUnits">
+                <Field Id="Enemy Upgrade"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Require Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="BurrowAmbush 2">
+            <GameLink GameLink="CCBurrowAmbushBurrowed">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/BurrowAmbush 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/BurrowAmbush 2_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="NetherCreep 3">
+            <GameLink GameLink="CCNetherCreep">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/NetherCreep 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/NetherCreep 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="K5CreepBonuses">
+                <Field Id="Enemy Upgrade"/>
+            </Upgrade>
+        </Instances>
+        <Instances Id="FactionMengsk 4">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/FactionMengsk 4_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/FactionMengsk 4_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="TacArsenal 1">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="TacArsenal 1">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/TacArsenal 1_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/TacArsenal 1_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="CCTacticalArsenalUnlockAll">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="MengskTopbar 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/MengskTopbar 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/MengskTopbar 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+                <Field Id="Require Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Require Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="GreatSilence 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/GreatSilence 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/GreatSilence 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Require Contracts" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="AntiGravity 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/AntiGravity 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/AntiGravity 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="BadLoad 3">
+            <GameLink GameLink="CCUltramarineOrb">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/BadLoad 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/BadLoad 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="Solar Lance 3">
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Solar Lance 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Solar Lance 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="FlashFreeze 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/FlashFreeze 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/FlashFreeze 3_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="MonoBattle 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/MonoBattle 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/MonoBattle 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="Infestation 2">
+            <GameLink GameLink="CCVolatileInfestationInfestable">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Infestation 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Infestation 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="EnemyWave 2">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/EnemyWave 2_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/EnemyWave 2_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="EnemyWave 3">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/EnemyWave 3_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/EnemyWave 3_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="CCFactionStructureMappings">
+        <Fields Id="Faction Index" Type="Int" EditorColumn="1"/>
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="20"/>
+            <EditorColumn value="2"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="SpecialFlag"/>
+            <Type value="Int"/>
+            <Count value="20"/>
+            <EditorColumn value="3"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="MengskWoL">
+            <Int Int="6">
+                <Field Id="Faction Index"/>
+            </Int>
+            <Unit Unit="PlanetaryFortressMengsk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="CommandCenterMengsk">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="BunkerDepotMengsk">
+                <Field Id="Units" Index="2"/>
+            </Unit>
+            <Unit Unit="BarracksMengsk">
+                <Field Id="Units" Index="3"/>
+            </Unit>
+            <Unit Unit="EngineeringBayMengsk">
+                <Field Id="Units" Index="4"/>
+            </Unit>
+            <Unit Unit="ArmoryMengsk">
+                <Field Id="Units" Index="5"/>
+            </Unit>
+            <Unit Unit="FactoryMengsk">
+                <Field Id="Units" Index="6"/>
+            </Unit>
+            <Unit Unit="StarportMengsk">
+                <Field Id="Units" Index="7"/>
+            </Unit>
+            <Unit Unit="GhostAcademyMengsk">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+            <Unit Unit="FusionCoreMengsk">
+                <Field Id="Units" Index="10"/>
+            </Unit>
+            <Unit Unit="MercCompound">
+                <Field Id="Units" Index="12"/>
+            </Unit>
+            <Unit Unit="BunkerDepotMengsk">
+                <Field Id="Units" Index="13"/>
+            </Unit>
+            <Unit Unit="MissileTurretMengsk">
+                <Field Id="Units" Index="14"/>
+            </Unit>
+            <Unit Unit="ArtilleryMengsk">
+                <Field Id="Units" Index="15"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCFactionUnitMappings">
+        <Fields Id="Faction Index" Type="Int" EditorColumn="1"/>
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Unit"/>
+            <Count value="25"/>
+            <EditorColumn value="2"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Special Flag"/>
+            <Type value="Int"/>
+            <Count value="25"/>
+            <EditorColumn value="3"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="MengskWoL">
+            <Int Int="6">
+                <Field Id="Faction Index"/>
+            </Int>
+            <Unit Unit="SCVMengsk">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="TrooperMengsk">
+                <Field Id="Units" Index="9"/>
+            </Unit>
+            <Unit Unit="Reaper">
+                <Field Id="Units" Index="10"/>
+            </Unit>
+            <Unit Unit="TrooperMengskImproved">
+                <Field Id="Units" Index="11"/>
+            </Unit>
+            <Unit Unit="GhostMengsk">
+                <Field Id="Units" Index="12"/>
+            </Unit>
+            <Unit Unit="MedicMengsk">
+                <Field Id="Units" Index="13"/>
+            </Unit>
+            <Unit Unit="TrooperMengskFlamethrower">
+                <Field Id="Units" Index="14"/>
+            </Unit>
+            <Unit Unit="GoliathMengsk">
+                <Field Id="Units" Index="15"/>
+            </Unit>
+            <Unit Unit="Vulture">
+                <Field Id="Units" Index="16"/>
+            </Unit>
+            <Unit Unit="VikingMengskFighter">
+                <Field Id="Units" Index="17"/>
+            </Unit>
+            <Unit Unit="RavenMengsk">
+                <Field Id="Units" Index="18"/>
+            </Unit>
+            <Unit Unit="SiegeTankMengsk">
+                <Field Id="Units" Index="19"/>
+            </Unit>
+            <Unit Unit="RavenMengsk">
+                <Field Id="Units" Index="20"/>
+            </Unit>
+            <Unit Unit="BansheeMengsk">
+                <Field Id="Units" Index="21"/>
+            </Unit>
+            <Unit Unit="WraithMengsk">
+                <Field Id="Units" Index="22"/>
+            </Unit>
+            <Unit Unit="Mengsk">
+                <Field Id="Units" Index="24"/>
+            </Unit>
+            <Unit Unit="ThorMengsk">
+                <Field Id="Units" Index="23"/>
+            </Unit>
+            <Unit Unit="BattlecruiserMengsk">
+                <Field Id="Units" Index="8"/>
+            </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCStructureTierMappings">
+        <Fields Id="Index" Type="Int" EditorColumn="1">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="Unit"/>
+            <Count value="15"/>
+            <EditorColumn value="2"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="T2Townhall">
+            <Int Int="1">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="OrbitalCommand">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Lair">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="PlanetaryFortress">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Townhall">
+            <Int Int="2">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="CommandCenter">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Nexus">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Hatchery">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="SupplyDepot">
+            <Int Int="3">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="SupplyDepot">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Overlord">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Pylon">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Barracks">
+            <Int Int="4">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Barracks">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Gateway">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="SpawningPool">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="WarpGate">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+        </Instances>
+        <Instances Id="EngiBay">
+            <Int Int="5">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="EngineeringBay">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Forge">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="EvolutionChamber">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Armory">
+            <Int Int="6">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Armory">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="RoboticsBay">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Factory">
+            <Int Int="7">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Factory">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="RoboticsFacility">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="HydraliskDen">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Starport">
+            <Int Int="8">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Starport">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Spire">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Stargate">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Tech">
+            <Int Int="9">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="GhostAcademy">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="CyberneticsCore">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="BanelingNest">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Tech">
+            <Int Int="10">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="TwilightCouncil">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="InfestationPit">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T3_Tech">
+            <Int Int="11">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="FusionCore">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="UltraliskCavern">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="FleetBeacon">
+                <Field Id="Unit"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Refinery">
+            <Int Int="12">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Refinery">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Extractor">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Assimilator">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="MercCompound">
+            <Int Int="13">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="MercCompound">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="RoachWarren">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="AG_Defense">
+            <Int Int="14">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="PhotonCannon">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Bunker">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="SpineCrawler">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="AA_Defense">
+            <Int Int="15">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="MissileTurret">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="SporeCrawler">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Defense">
+            <Int Int="16">
+                <Field Id="Index"/>
+            </Int>
+        </Instances>
+    </CUser>
+    <CUser id="CCUnitTierMappings">
+        <Fields Id="Index" Type="Int" EditorColumn="1">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Fields>
+            <Id value="Unit"/>
+            <Type value="Unit"/>
+            <Count value="15"/>
+            <EditorColumn value="2"/>
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Worker">
+            <Int Int="1">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="SCV">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="LeithenianSCV">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="GuerillaSCV">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="SpecSCV">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="KazdelSCV">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="YetiSCV">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="Rhodesscv">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="Drone">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="Probe">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="RogueSeabornDrone">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+            <Unit Unit="SeabornDrone">
+                <Field Id="Unit" Index="10"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Larva">
+            <Int Int="2">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Larva">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="RougeSeabornLarva">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="SeabornLarva">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T3_Air">
+            <Int Int="9">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Carrier">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Infantry">
+            <Int Int="10">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Marine">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Zealot">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="GuerillaFighter">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="YetiSoldier">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="SpecSoldier">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="KazdelSoldier">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="RhodesMelee">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="SeabornFish">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+            <Unit Unit="Zergling">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Reaper">
+            <Int Int="11">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Reaper">
+                <Field Id="Unit"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Marauder">
+            <Int Int="12">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Marauder">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Roach">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Adept">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="GuerillaSniper">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="YetiSniper">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="SarkazSniper">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="MRSniper">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="RhodesSniper">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="SeabornRoach">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Caster">
+            <Int Int="13">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Stalker">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Ghost">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Ravager">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="Spectre">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="SeabornLancer">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="LeithenianCaster">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Support">
+            <Int Int="14">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Medic">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Sentry">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Queen">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="SeabornQueen">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="GuerillaHerald">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="ZombieHobo">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="KazdelSentinel">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="RhodesMedic">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T1_Splash">
+            <Int Int="15">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Firebat">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="ZealotAiur">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Baneling">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="YetiSpider">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="BombSpider">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="Hellion">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Basic">
+            <Int Int="16">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Hydralisk">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="SeabornHydra">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="PhantomCrossbow">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="ArtsGuard">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="SarkazGreatsword">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="GuerillaSiegebreaker">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="MudrockZealot">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="Mibo">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+            <Unit Unit="GuerillaSarkaz">
+                <Field Id="Unit" Index="10"/>
+            </Unit>
+            <Unit Unit="Goliath">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Vulture">
+            <Int Int="17">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Vulture">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="GuerillaCaster">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="SeniorCaster">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="SarkazCaster">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="SeabornBishop">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="SeabornCaster">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="LensBot">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="Javelin">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Air">
+            <Int Int="18">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Mutalisk">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="VikingFighter">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Phoenix">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="SeabornFlyer">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="YokaiMkII">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="ArtsbirdA1">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_AirSupport">
+            <Int Int="19">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Raven">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Viper">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Oracle">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="ScienceVessel">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="DefDrone">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="SeabornViper">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="Medivac">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Siege">
+            <Int Int="20">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="SiegeTank">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="SiegeTankSieged">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Immortal">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="DarkTemplar">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="KazdelArtsGuard">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="Crusher">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="WinterWisp">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Detector">
+            <Int Int="21">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Observer">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Overseer">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="TechScout">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_BigAir">
+            <Int Int="22">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="VoidRay">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Banshee">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Corruptor">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="SeabornGuardian">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="SeabornUfo">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="Bombtail">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="ArtsbirdA2">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="DDFdrone">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T2_Wraith">
+            <Int Int="23">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Wraith">
+                <Field Id="Unit"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T3_Ground">
+            <Int Int="24">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="ThorAP">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="Ultralisk">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Colossus">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="GuerillaShielder">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="YetiIcecleaver">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="MudrockGolem">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="Berserker">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="KazdelCaster">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="SeabornBoy">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="SeabornFlower">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+            <Unit Unit="BigUgly">
+                <Field Id="Unit" Index="10"/>
+            </Unit>
+            <Unit Unit="Thor">
+                <Field Id="Unit" Index="11"/>
+            </Unit>
+            <Unit Unit="Archon">
+                <Field Id="Unit" Index="12"/>
+            </Unit>
+        </Instances>
+        <Instances Id="T3_Hero">
+            <Int Int="25">
+                <Field Id="Index"/>
+            </Int>
+            <Unit Unit="Raynor01">
+                <Field Id="Unit"/>
+            </Unit>
+            <Unit Unit="FrostNova">
+                <Field Id="Unit" Index="1"/>
+            </Unit>
+            <Unit Unit="Faust">
+                <Field Id="Unit" Index="2"/>
+            </Unit>
+            <Unit Unit="Mudrock">
+                <Field Id="Unit" Index="3"/>
+            </Unit>
+            <Unit Unit="cqbw">
+                <Field Id="Unit" Index="4"/>
+            </Unit>
+            <Unit Unit="Amiya">
+                <Field Id="Unit" Index="5"/>
+            </Unit>
+            <Unit Unit="Kaltsit">
+                <Field Id="Unit" Index="6"/>
+            </Unit>
+            <Unit Unit="Sharp">
+                <Field Id="Unit" Index="7"/>
+            </Unit>
+            <Unit Unit="Skalter">
+                <Field Id="Unit" Index="8"/>
+            </Unit>
+            <Unit Unit="SeabornBeauty">
+                <Field Id="Unit" Index="9"/>
+            </Unit>
+        </Instances>
+    </CUser>
+</Catalog>

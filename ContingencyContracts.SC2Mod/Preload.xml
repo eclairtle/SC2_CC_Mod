@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Asset path="assets\textures\ui_generic_button_normaloverpressedover_zerg.dds" Type="Image"/>
+<Asset path="assets\textures\ui_generic_button_normalpressed.dds" Type="Image"/>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="QueenSpawnLarva"/>
+<Behavior id="CCCollapsalWander"/>
+<Behavior id="CCFactionSwapPlayerUnit"/>
+<Behavior id="CCNoSwap"/>
+<Behavior id="CCRandomgroundunitdummy"/>
+<Behavior id="CCRandomairunitdummy"/>
+<Behavior id="CCAlreadyFragilized"/>
+<Behavior id="ProductionStructureIdentifier"/>
+<Behavior id="CCCollapsal"/>
+<Behavior id="PacifismPlayerIdentifier"/>
+<Behavior id="HandofInfinityVictim"/>
+<Behavior id="SurviversPact200"/>
+<Behavior id="SurviversPact50"/>
+<Behavior id="SurviversPact100"/>
+<Sound id="Ghost_NukeLaunch"/>
+<Sound id="Sentry_GuardianShieldLaunch"/>
+<Sound id="Obelisk_TimeWarpImpact"/>
+<Sound id="THanson02MusicEventA"/>
+<Sound id="THanson02MusicEventB"/>
+<Sound id="Ping"/>
+<Sound id="UI_ObjectiveFailed"/>
+<Sound id="SOABomberModeTarget_Select_Layer"/>
+<Unit id="Overlord"/>
+<Unit id="CCSolarLanceDummy"/>
+<Unit id="CCTopbarInvisibleCaster"/>
+<Unit id="CCNukeDetonateDummy"/>
+<Unit id="VolatileSolarite"/>
+<Unit id="CCGuidedNuke"/>
+</Preload>
