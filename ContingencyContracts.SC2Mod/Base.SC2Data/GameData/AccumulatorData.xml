@@ -4,11 +4,11 @@
         <Parameters value="1"/>
     </CAccumulatorArithmetic>
     <CAccumulatorVitals id="CCInitialFragilityIIILife">
-        <Ratio value="0.4003"/>
+        <Ratio value="0.3"/>
         <UnitSource Value="Target"/>
     </CAccumulatorVitals>
     <CAccumulatorVitals id="CCInitialFragilityIIIShields">
-        <Ratio value="0.4003"/>
+        <Ratio value="0.3"/>
         <VitalType value="Shields"/>
         <UnitSource Value="Target"/>
     </CAccumulatorVitals>
@@ -26,11 +26,11 @@
         <SourceEffect value="CCSpeedAtkBoosts"/>
     </CAccumulatorSwitch>
     <CAccumulatorVitals id="CCInitialFragilityIILife">
-        <Ratio value="0.6003"/>
+        <Ratio value="0.5"/>
         <UnitSource Value="Target"/>
     </CAccumulatorVitals>
     <CAccumulatorVitals id="CCInitialFragilityIIShields">
-        <Ratio value="0.6003"/>
+        <Ratio value="0.5"/>
         <VitalType value="Shields"/>
         <UnitSource Value="Target"/>
     </CAccumulatorVitals>

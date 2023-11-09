@@ -24,6 +24,42 @@
             <Unit Unit="ZealotPurifier">
                 <Field Id="Target Unit"/>
             </Unit>
+            <User Type="ContingencyContracts" Instance="EnemyPurifier">
+                <Field Id="Require Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="Stalker">
+            <Unit Unit="StalkerPurifier">
+                <Field Id="Target Unit"/>
+            </Unit>
+            <Unit Unit="Stalker">
+                <Field Id="Source Unit"/>
+            </Unit>
+            <User Type="ContingencyContracts" Instance="EnemyPurifier">
+                <Field Id="Require Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="Colossus">
+            <Unit Unit="Colossus">
+                <Field Id="Source Unit"/>
+            </Unit>
+            <Unit Unit="ColossusPurifier">
+                <Field Id="Target Unit"/>
+            </Unit>
+            <User Type="ContingencyContracts" Instance="EnemyPurifier">
+                <Field Id="Require Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="Phoenix">
+            <Unit Unit="Phoenix">
+                <Field Id="Source Unit"/>
+            </Unit>
+            <Unit Unit="PhoenixPurifier">
+                <Field Id="Target Unit"/>
+            </Unit>
+            <User Type="ContingencyContracts" Instance="EnemyPurifier">
+                <Field Id="Require Contract"/>
+            </User>
         </Instances>
     </CUser>
     <CUser id="CCGameplayElements">
@@ -1768,16 +1804,336 @@
         <Fields>
             <Id value="Units"/>
             <Type value="Unit"/>
-            <Count value="6"/>
-            <EditorColumn value="1"/>
+            <Count value="10"/>
+            <EditorColumn value="2"/>
         </Fields>
         <Fields>
             <Id value="Ability Command"/>
             <Type value="AbilCmd"/>
-            <Count value="6"/>
-            <EditorColumn value="2"/>
+            <Count value="10"/>
+            <EditorColumn value="3"/>
         </Fields>
+        <Fields>
+            <Id value="Ban Unit?"/>
+            <Type value="Int"/>
+            <Count value="10"/>
+            <EditorColumn value="4"/>
+        </Fields>
+        <Fields Id="Category Flag" Type="Int" EditorColumn="1"/>
         <Instances Id="[Default]"/>
+        <Instances Id="Marine">
+            <AbilCmd Abil="BarracksTrain">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Marine">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="WarPig">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Reaper">
+            <AbilCmd Abil="BarracksTrain" Cmd="1">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Reaper">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Medic">
+            <AbilCmd Abil="BarracksTrain" Cmd="4">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Medic">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Marauder">
+            <AbilCmd Abil="BarracksTrain" Cmd="3">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="3">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Marauder">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HammerSecurity">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Firebat">
+            <AbilCmd Abil="SummonMercenaries" Cmd="1">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <AbilCmd Abil="BarracksTrain" Cmd="5">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Firebat">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="DevilDog">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Ghost">
+            <AbilCmd Abil="BarracksTrain" Cmd="2">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="BarracksTrain" Cmd="6">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Ghost">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="Spectre">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="HERC">
+            <Int Int="1">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="HERC">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Siege Tank">
+            <AbilCmd Abil="FactoryTrain" Cmd="1">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="4">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="SiegeTank">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SiegeBreaker">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Thor">
+            <AbilCmd Abil="FactoryTrain" Cmd="4">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="ThorAP">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Hellion">
+            <AbilCmd Abil="FactoryTrain" Cmd="5">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="FactoryTrain" Cmd="6">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Hellion">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HellionTank">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Goliath">
+            <AbilCmd Abil="FactoryTrain" Cmd="2">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="2">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Goliath">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="SpartanCompany">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Diamondback">
+            <AbilCmd Abil="FactoryTrain" Cmd="3">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Diamondback">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Cyclone">
+            <AbilCmd Abil="FactoryTrain" Cmd="7">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+        </Instances>
+        <Instances Id="WidowMine">
+            <AbilCmd Abil="FactoryTrain" Cmd="24">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="WidowMine">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Vulture">
+            <AbilCmd Abil="FactoryTrain" Cmd="9">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Vulture">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Predator">
+            <AbilCmd Abil="FactoryTrain" Cmd="10">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="2">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Predator">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Medivac">
+            <AbilCmd Abil="StarportTrain">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Medivac">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Viking">
+            <AbilCmd Abil="StarportTrain" Cmd="4">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="5">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="VikingFighter">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="HelsAngelFighter">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Banshee">
+            <AbilCmd Abil="StarportTrain" Cmd="1">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="6">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Banshee">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="DuskWing">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Hercules">
+            <AbilCmd Abil="StarportTrain" Cmd="5">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Hercules">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Raven">
+            <AbilCmd Abil="StarportTrain" Cmd="2">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="StarportTrain" Cmd="8">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Raven">
+                <Field Id="Units"/>
+            </Unit>
+            <Unit Unit="ScienceVessel">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Wraith">
+            <AbilCmd Abil="StarportTrain" Cmd="7">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="Wraith">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
+        <Instances Id="Battlecruiser">
+            <AbilCmd Abil="StarportTrain" Cmd="3">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <AbilCmd Abil="SummonMercenaries" Cmd="7">
+                <Field Id="Ability Command" Index="1"/>
+            </AbilCmd>
+            <Int Int="3">
+                <Field Id="Category Flag"/>
+            </Int>
+            <Unit Unit="DukesRevenge">
+                <Field Id="Units" Index="1"/>
+            </Unit>
+            <Unit Unit="Battlecruiser">
+                <Field Id="Units"/>
+            </Unit>
+        </Instances>
         <Instances Id="Zergling">
             <AbilCmd Abil="LarvaTrainSwarm" Cmd="9">
                 <Field Id="Ability Command"/>
@@ -1799,20 +2155,6 @@
             </Unit>
             <Unit Unit="Zergling">
                 <Field Id="Units" Index="2"/>
-            </Unit>
-        </Instances>
-        <Instances Id="Marine">
-            <AbilCmd Abil="BarracksTrain">
-                <Field Id="Ability Command"/>
-            </AbilCmd>
-            <AbilCmd Abil="SummonMercenaries">
-                <Field Id="Ability Command" Index="1"/>
-            </AbilCmd>
-            <Unit Unit="Marine">
-                <Field Id="Units"/>
-            </Unit>
-            <Unit Unit="WarPig">
-                <Field Id="Units" Index="1"/>
             </Unit>
         </Instances>
         <Instances Id="Zealot">
@@ -1948,6 +2290,7 @@
         <Fields Id="Description" Type="Text">
             <Flags index="Modifiable" value="1"/>
         </Fields>
+        <Fields Id="Lighting" Type="GameLink" GameLinkType="Light"/>
         <Instances Id="[Default]"/>
         <Instances Id="Great Silence">
             <Fixed Fixed="120">
@@ -1959,13 +2302,16 @@
             <GameLink GameLink="GreatSilence">
                 <Field Id="Associated Behavior"/>
             </GameLink>
+            <GameLink GameLink="CCGreatSilence">
+                <Field Id="Lighting"/>
+            </GameLink>
             <Text Text="UserData/CCWeatherConditions/Great Silence_Description">
                 <Field Id="Description"/>
             </Text>
             <Text Text="UserData/CCWeatherConditions/Great Silence_Name">
                 <Field Id="Name"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="GreatSilence 3">
+            <User Type="ContingencyContracts" Instance="GreatSilence">
                 <Field Id="Contract"/>
             </User>
         </Instances>
@@ -1979,13 +2325,16 @@
             <GameLink GameLink="CCPerceptionScrambler">
                 <Field Id="Associated Behavior"/>
             </GameLink>
+            <GameLink GameLink="CCEMP">
+                <Field Id="Lighting"/>
+            </GameLink>
             <Text Text="UserData/CCWeatherConditions/BlackUnit_Description">
                 <Field Id="Description"/>
             </Text>
             <Text Text="UserData/CCWeatherConditions/BlackUnit_Name">
                 <Field Id="Name"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="BlackUnit 2">
+            <User Type="ContingencyContracts" Instance="BlackUnit">
                 <Field Id="Contract"/>
             </User>
         </Instances>
@@ -1999,6 +2348,9 @@
             <GameLink GameLink="CCFlashFreeze">
                 <Field Id="Associated Behavior"/>
             </GameLink>
+            <GameLink GameLink="CCFlashFreeze">
+                <Field Id="Lighting"/>
+            </GameLink>
             <Text Text="UserData/CCWeatherConditions/FlashFreeze_Description">
                 <Field Id="Description"/>
             </Text>
@@ -2008,7 +2360,85 @@
             <Upgrade Upgrade="CCFlashFreezeActive">
                 <Field Id="Player Upgrades"/>
             </Upgrade>
-            <User Type="ContingencyContracts" Instance="FlashFreeze 3">
+            <User Type="ContingencyContracts" Instance="FlashFreeze">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="ScorchSun">
+            <Fixed Fixed="60">
+                <Field Id="Duration"/>
+            </Fixed>
+            <Fixed Fixed="90">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <GameLink GameLink="CCScorchingSun">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <GameLink GameLink="CCScorching">
+                <Field Id="Lighting"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/ScorchSun_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/ScorchSun_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="CCScorchingSunActive">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="ScorchSun">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="AntiGravity">
+            <Fixed Fixed="90">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <Fixed Fixed="45">
+                <Field Id="Duration"/>
+            </Fixed>
+            <GameLink GameLink="CCGravitonTurbulance">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <GameLink GameLink="CCAntiGravity">
+                <Field Id="Lighting"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/AntiGravity_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/AntiGravity_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Upgrade Upgrade="CCGravitonStormActive">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="AntiGravity">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="GammaStorm">
+            <Fixed Fixed="90">
+                <Field Id="Cooldown"/>
+            </Fixed>
+            <Fixed Fixed="45">
+                <Field Id="Duration"/>
+            </Fixed>
+            <GameLink GameLink="CCGammaStorm">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <GameLink GameLink="CCGammaStorm">
+                <Field Id="Lighting"/>
+            </GameLink>
+            <Text Text="UserData/CCWeatherConditions/GammaStorm_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/CCWeatherConditions/GammaStorm_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Upgrade Upgrade="CCGammaStormActive">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="GammaStorm">
                 <Field Id="Contract"/>
             </User>
         </Instances>
@@ -2054,10 +2484,10 @@
             <User Type="ContingencyContracts" Instance="Enemy_HP 3">
                 <Field Id="Contracts" Index="1"/>
             </User>
-            <User Type="ContingencyContracts" Instance="BlackCrown 3">
+            <User Type="ContingencyContracts" Instance="BlackCrown">
                 <Field Id="Supports" Index="1"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Chrono CWAL 3">
+            <User Type="ContingencyContracts" Instance="Chrono CWAL">
                 <Field Id="Supports"/>
             </User>
             <User Type="ContingencyContracts" Instance="Enemy_Atk 2">
@@ -2072,7 +2502,7 @@
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="5"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Deathless_2">
+            <User Type="ContingencyContracts" Instance="Deathless_3">
                 <Field Id="Contracts" Index="6"/>
             </User>
             <User Type="ContingencyContracts" Instance="Deathless_5">
@@ -2081,17 +2511,14 @@
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="8"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Enemyfast 2">
+            <User Type="ContingencyContracts" Instance="Enemyfast">
                 <Field Id="Contracts" Index="9"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Supply_Down 2">
+            <User Type="ContingencyContracts" Instance="Supply_Down">
                 <Field Id="Contracts" Index="10"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Line Break">
+            <User Type="ContingencyContracts" Instance="Atkdownearly">
                 <Field Id="Contracts" Index="12"/>
-            </User>
-            <User Type="ContingencyContracts" Instance="Upgdown 2">
-                <Field Id="Contracts" Index="13"/>
             </User>
             <User Type="ContingencyContracts" Instance="Pacifist 5">
                 <Field Id="Contracts" Index="14"/>
@@ -2108,34 +2535,34 @@
             <User Type="ContingencyContracts" Instance="Line Break">
                 <Field Id="Supports" Index="4"/>
             </User>
-            <User Type="ContingencyContracts" Instance="King Aspd 2">
+            <User Type="ContingencyContracts" Instance="King Aspd">
                 <Field Id="Supports" Index="5"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Gold Chalice4">
+            <User Type="ContingencyContracts" Instance="Gold Chalice">
                 <Field Id="Supports" Index="6"/>
             </User>
-            <User Type="ContingencyContracts" Instance="KineticBoost 2">
+            <User Type="ContingencyContracts" Instance="KineticBoost">
                 <Field Id="Supports" Index="7"/>
             </User>
             <User Type="ContingencyContracts" Instance="Line Break">
                 <Field Id="Supports" Index="8"/>
             </User>
-            <User Type="ContingencyContracts" Instance="InfEnergy 3">
+            <User Type="ContingencyContracts" Instance="InfEnergy">
                 <Field Id="Supports" Index="9"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Surviver Pact 4">
+            <User Type="ContingencyContracts" Instance="Surviver Pact">
                 <Field Id="Supports" Index="10"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Resource drain 2">
+            <User Type="ContingencyContracts" Instance="Resource drain">
                 <Field Id="Contracts" Index="11"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="Randomizer 2">
                 <Field Id="Contracts" Index="18"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Randomizer 2">
+            <User Type="ContingencyContracts" Instance="Randomizerbad 3">
                 <Field Id="Contracts" Index="19"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Randomizerbad 3">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="20"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
@@ -2144,16 +2571,16 @@
             <User Type="ContingencyContracts" Instance="Randomizergood 2">
                 <Field Id="Supports" Index="12"/>
             </User>
-            <User Type="ContingencyContracts" Instance="ResourcePickup 2">
+            <User Type="ContingencyContracts" Instance="ResourcePickup">
                 <Field Id="Supports" Index="2"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="13"/>
             </User>
-            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+            <User Type="ContingencyContracts" Instance="FactionMengsk">
                 <Field Id="Supports" Index="14"/>
             </User>
-            <User Type="ContingencyContracts" Instance="TacArsenal 1">
+            <User Type="ContingencyContracts" Instance="TacArsenal">
                 <Field Id="Supports" Index="15"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
@@ -2171,14 +2598,20 @@
             <User Type="ContingencyContracts" Instance="Dec_ATKup">
                 <Field Id="Supports" Index="19"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="Cooldown">
                 <Field Id="Contracts" Index="21"/>
             </User>
-            <User Type="ContingencyContracts" Instance="EnemyWave 2">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="22"/>
             </User>
-            <User Type="ContingencyContracts" Instance="EnemyWave 3">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="23"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Atkdownlate">
+                <Field Id="Contracts" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="24"/>
             </User>
         </Instances>
         <Instances Id="Tactical">
@@ -2191,70 +2624,70 @@
             <Text Text="UserData/ContingencyContractClasses/Tactical_Tooltip">
                 <Field Id="Tooltip"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="RS Nuke 2">
+            <User Type="ContingencyContracts" Instance="RS Nuke">
                 <Field Id="Supports"/>
             </User>
             <User Type="ContingencyContracts" Instance="Line Break">
                 <Field Id="Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Booster 1">
+            <User Type="ContingencyContracts" Instance="Booster">
                 <Field Id="Supports" Index="1"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+            <User Type="ContingencyContracts" Instance="Sandevistan">
                 <Field Id="Supports" Index="2"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+            <User Type="ContingencyContracts" Instance="Laevateinn">
                 <Field Id="Supports" Index="3"/>
             </User>
             <User Type="ContingencyContracts" Instance="Line Break">
                 <Field Id="Supports" Index="4"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Calldown Hyperion 2">
+            <User Type="ContingencyContracts" Instance="Calldown Hyperion">
                 <Field Id="Supports" Index="5"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="BanProduction 3">
                 <Field Id="Contracts" Index="5"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Nuke_follow 2">
+            <User Type="ContingencyContracts" Instance="Nuke_follow">
                 <Field Id="Contracts" Index="1"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Solarite 3">
+            <User Type="ContingencyContracts" Instance="Solarite">
                 <Field Id="Contracts" Index="2"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="3"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Collapsal 3">
+            <User Type="ContingencyContracts" Instance="BanProduction 2">
                 <Field Id="Contracts" Index="4"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Calldown Odin 3">
+            <User Type="ContingencyContracts" Instance="Calldown Odin">
                 <Field Id="Supports" Index="6"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="7"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="IonCannon">
                 <Field Id="Supports" Index="8"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Orbital Drops 2">
+            <User Type="ContingencyContracts" Instance="Hflash">
                 <Field Id="Supports" Index="9"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Vespene Effeciency I">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="10"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Reactors 1">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="11"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Bullettime 2">
+            <User Type="ContingencyContracts" Instance="Bullettime">
                 <Field Id="Supports" Index="12"/>
             </User>
-            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+            <User Type="ContingencyContracts" Instance="InstSalvage">
                 <Field Id="Supports" Index="13"/>
             </User>
-            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+            <User Type="ContingencyContracts" Instance="VoidDomain">
                 <Field Id="Supports" Index="14"/>
             </User>
-            <User Type="ContingencyContracts" Instance="MengskTopbar 3">
+            <User Type="ContingencyContracts" Instance="MengskTopbar">
                 <Field Id="Supports" Index="15"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
@@ -2266,17 +2699,41 @@
             <User Type="ContingencyContracts" Instance="Dec_StartResource">
                 <Field Id="Supports" Index="18"/>
             </User>
-            <User Type="ContingencyContracts" Instance="FlashFreeze 3">
+            <User Type="ContingencyContracts" Instance="EnemyWave 2">
                 <Field Id="Contracts" Index="6"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="EnemyWave 3">
                 <Field Id="Contracts" Index="7"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="8"/>
             </User>
-            <User Type="ContingencyContracts" Instance="MonoBattle 3">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="NightmareWave">
+                <Field Id="Contracts" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="NightmareExpand">
+                <Field Id="Contracts" Index="10"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="FlashFreeze">
+                <Field Id="Contracts" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="ScorchSun">
+                <Field Id="Contracts" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="GammaStorm">
+                <Field Id="Contracts" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="AntiGravity">
+                <Field Id="Contracts" Index="15"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="16"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="ClimateChaos">
+                <Field Id="Contracts" Index="17"/>
             </User>
         </Instances>
         <Instances Id="Emergency">
@@ -2292,6 +2749,15 @@
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports"/>
             </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="ScreenFlip">
+                <Field Id="Contracts" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="12"/>
+            </User>
         </Instances>
         <Instances Id="AllResearch">
             <Text Text="UserData/ContingencyContractClasses/AllResearch_Name">
@@ -2300,50 +2766,83 @@
             <Text Text="UserData/ContingencyContractClasses/AllResearch_Tooltip">
                 <Field Id="Tooltip"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="InstantArmory 1">
+            <User Type="ContingencyContracts" Instance="InstantArmory">
                 <Field Id="Supports"/>
             </User>
-            <User Type="ContingencyContracts" Instance="ObjProtection 1">
+            <User Type="ContingencyContracts" Instance="ObjProtection">
                 <Field Id="Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="BlackUnit 2">
+            <User Type="ContingencyContracts" Instance="BlackUnit">
                 <Field Id="Contracts" Index="1"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="1"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Fatal 4">
+            <User Type="ContingencyContracts" Instance="Fatal">
                 <Field Id="Supports" Index="2"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="3"/>
             </User>
-            <User Type="ContingencyContracts" Instance="TimedVirus 3">
+            <User Type="ContingencyContracts" Instance="TimedVirus">
                 <Field Id="Contracts" Index="3"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Thrasher 3">
+            <User Type="ContingencyContracts" Instance="Thrasher">
                 <Field Id="Contracts" Index="2"/>
             </User>
-            <User Type="ContingencyContracts" Instance="EnemyPurifier 3">
+            <User Type="ContingencyContracts" Instance="BadLoad">
                 <Field Id="Contracts" Index="4"/>
             </User>
-            <User Type="ContingencyContracts" Instance="BurrowAmbush 2">
+            <User Type="ContingencyContracts" Instance="BurrowAmbush">
                 <Field Id="Contracts" Index="5"/>
             </User>
-            <User Type="ContingencyContracts" Instance="NetherCreep 3">
+            <User Type="ContingencyContracts" Instance="NetherCreep">
                 <Field Id="Contracts" Index="6"/>
             </User>
-            <User Type="ContingencyContracts" Instance="BadLoad 3">
+            <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Contracts" Index="7"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Solar Lance 3">
+            <User Type="ContingencyContracts" Instance="Solar Lance">
                 <Field Id="Contracts" Index="8"/>
             </User>
-            <User Type="ContingencyContracts" Instance="GreatSilence 3">
+            <User Type="ContingencyContracts" Instance="GreatSilence">
                 <Field Id="Contracts" Index="9"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Infestation 2">
+            <User Type="ContingencyContracts" Instance="Infestation">
                 <Field Id="Contracts" Index="10"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Orbital Drops">
+                <Field Id="Supports" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Reactors">
+                <Field Id="Supports" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Vespene Effeciency">
+                <Field Id="Supports" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="8"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Collapsal">
+                <Field Id="Contracts" Index="11"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="PrimalDrop">
+                <Field Id="Contracts" Index="12"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="LeviDrop">
+                <Field Id="Contracts" Index="13"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="GuardianShell">
+                <Field Id="Contracts" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="14"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="9"/>
             </User>
         </Instances>
         <Instances Id="TossResearch">
@@ -2355,6 +2854,30 @@
             </Text>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Supports" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Solar Lance">
+                <Field Id="Contracts" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BlackUnit">
+                <Field Id="Contracts" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BadLoad">
+                <Field Id="Contracts" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contracts" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Supports" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Collapsal">
+                <Field Id="Contracts" Index="6"/>
             </User>
         </Instances>
         <Instances Id="ZergResearch">
@@ -2516,48 +3039,48 @@
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Supply_Down 2">
+        <Instances Id="Supply_Down">
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Supply_Down 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Supply_Down_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Supply_Down 2_Description">
+            <Text Text="UserData/ContingencyContracts/Supply_Down_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Nuke_follow 2">
+        <Instances Id="Nuke_follow">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Nuke_follow 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Nuke_follow_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Nuke_follow 2_Description">
+            <Text Text="UserData/ContingencyContracts/Nuke_follow_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Solarite 3">
+            <User Type="ContingencyContracts" Instance="Solarite">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Deathless_2">
-            <Int Int="2">
+        <Instances Id="Deathless_3">
+            <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Deathless_2_Description">
+            <Text Text="UserData/ContingencyContracts/Deathless_3_Description">
                 <Field Id="Description"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Deathless_2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Deathless_3_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
             <User Type="ContingencyContracts" Instance="Deathless_5">
@@ -2577,7 +3100,7 @@
             <Text Text="UserData/ContingencyContracts/Deathless_5_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Deathless_2">
+            <User Type="ContingencyContracts" Instance="Deathless_3">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
@@ -2615,21 +3138,30 @@
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Upgdown 2">
+        <Instances Id="Atkdownlate">
+            <GameLink GameLink="CCatkdownlate">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
+            <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Upgdown 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Atkdownlate_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Upgdown 2_Description">
+            <Text Text="UserData/ContingencyContracts/Atkdownlate_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="ContingencyContracts" Instance="Pacifist 5">
                 <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Atkdownearly">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
             </User>
         </Instances>
         <Instances Id="Pacifist 5">
@@ -2648,14 +3180,17 @@
             <Text Text="UserData/ContingencyContracts/Pacifist 5_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="ObjProtection 1">
+            <User Type="ContingencyContracts" Instance="ObjProtection">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="[Default]">
+            <User Type="ContingencyContracts" Instance="Atkdownlate">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
+            <User Type="ContingencyContracts" Instance="Atkdownearly">
+                <Field Id="Turnoff Contracts" Index="2"/>
+            </User>
         </Instances>
-        <Instances Id="King Aspd 2">
+        <Instances Id="King Aspd">
             <GameLink GameLink="CCKingsLance">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -2668,14 +3203,14 @@
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/King Aspd 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/King Aspd_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/King Aspd 2_Description">
+            <Text Text="UserData/ContingencyContracts/King Aspd_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Fatal 4">
+        <Instances Id="Fatal">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -2688,14 +3223,14 @@
             <Int Int="3">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Fatal 4_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Fatal_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Fatal 4_Description">
+            <Text Text="UserData/ContingencyContracts/Fatal_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="RS Nuke 2">
+        <Instances Id="RS Nuke">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -2705,43 +3240,43 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/RS Nuke 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/RS Nuke_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/RS Nuke 2_Description">
+            <Text Text="UserData/ContingencyContracts/RS Nuke_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="CCRSNuke">
                 <Field Id="Player Upgrades"/>
             </Upgrade>
         </Instances>
-        <Instances Id="Sandevistan 2">
+        <Instances Id="Sandevistan">
             <GameLink GameLink="CCSandevistan">
                 <Field Id="Associated Ability"/>
             </GameLink>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
+            <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Sandevistan 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Sandevistan_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Sandevistan 2_Description">
+            <Text Text="UserData/ContingencyContracts/Sandevistan_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+            <User Type="ContingencyContracts" Instance="Laevateinn">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Booster 1">
+            <User Type="ContingencyContracts" Instance="Booster">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="Laevateinn 3">
+        <Instances Id="Laevateinn">
             <GameLink GameLink="Laevateinn">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -2754,40 +3289,49 @@
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Laevateinn 3_Description">
+            <Text Text="UserData/ContingencyContracts/Laevateinn_Description">
                 <Field Id="Description"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Laevateinn 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Laevateinn_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+            <User Type="ContingencyContracts" Instance="Sandevistan">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Booster 1">
+            <User Type="ContingencyContracts" Instance="Booster">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="Enemy_HP txt">
+        <Instances Id="NightmareExpand">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
-                <Field Id="Contract Type"/>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Enemy_HP txt_Description">
+            <Text Text="UserData/ContingencyContracts/NightmareExpand_Description">
                 <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/NightmareExpand_Contract Name">
+                <Field Id="Contract Name"/>
             </Text>
         </Instances>
-        <Instances Id="Enemy_ATK txt">
+        <Instances Id="NightmareWave">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
-                <Field Id="Contract Type"/>
+            <Int Int="1">
+                <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Enemy_ATK txt_Description">
+            <Text Text="UserData/ContingencyContracts/NightmareWave_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/NightmareWave_Description">
                 <Field Id="Description"/>
             </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
         </Instances>
         <Instances Id="Line Break">
             <Int Int="1">
@@ -2797,7 +3341,7 @@
                 <Field Id="Contract Type"/>
             </Int>
         </Instances>
-        <Instances Id="Calldown Hyperion 2">
+        <Instances Id="Calldown Hyperion">
             <GameLink GameLink="CalldownHyperion">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -2813,20 +3357,20 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Calldown Hyperion 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Calldown Hyperion_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Calldown Hyperion 2_Description">
+            <Text Text="UserData/ContingencyContracts/Calldown Hyperion_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Calldown Odin 3">
+            <User Type="ContingencyContracts" Instance="Calldown Odin">
                 <Field Id="Turnoff Contracts"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="Calldown Odin 3">
+        <Instances Id="Calldown Odin">
             <GameLink GameLink="CalldownOdin">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -2842,41 +3386,41 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Calldown Odin 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Calldown Odin_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Calldown Odin 3_Description">
+            <Text Text="UserData/ContingencyContracts/Calldown Odin_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Calldown Hyperion 2">
+            <User Type="ContingencyContracts" Instance="Calldown Hyperion">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Solarite 3">
+        <Instances Id="Solarite">
             <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Solarite 3_Description">
+            <Text Text="UserData/ContingencyContracts/Solarite_Description">
                 <Field Id="Description"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Solarite 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Solarite_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Nuke_follow 2">
+            <User Type="ContingencyContracts" Instance="Nuke_follow">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Bullettime 2">
+        <Instances Id="Bullettime">
             <GameLink GameLink="CCBulletTime">
                 <Field Id="Associated Ability"/>
             </GameLink>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
+            <Int Int="1">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
@@ -2885,20 +3429,20 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Bullettime 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Bullettime_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Bullettime 2_Description">
+            <Text Text="UserData/ContingencyContracts/Bullettime_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+            <User Type="ContingencyContracts" Instance="InstSalvage">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+            <User Type="ContingencyContracts" Instance="VoidDomain">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="Orbital Drops 2">
+        <Instances Id="Orbital Drops">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -2908,10 +3452,10 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Orbital Drops 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Orbital Drops_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Orbital Drops 2_Description">
+            <Text Text="UserData/ContingencyContracts/Orbital Drops_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="OrbitalStrike">
@@ -2921,7 +3465,7 @@
                 <Field Id="Player Upgrades" Index="1"/>
             </Upgrade>
         </Instances>
-        <Instances Id="Reactors 1">
+        <Instances Id="Reactors">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -2931,10 +3475,10 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Reactors 1_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Reactors_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Reactors 1_Description">
+            <Text Text="UserData/ContingencyContracts/Reactors_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="CommandCenterReactor">
@@ -2944,7 +3488,7 @@
                 <Field Id="Player Upgrades" Index="1"/>
             </Upgrade>
         </Instances>
-        <Instances Id="Vespene Effeciency I">
+        <Instances Id="Vespene Effeciency">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -2954,10 +3498,10 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Vespene Effeciency I_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Vespene Effeciency_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Vespene Effeciency I_Description">
+            <Text Text="UserData/ContingencyContracts/Vespene Effeciency_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="MicroFiltering">
@@ -2967,7 +3511,7 @@
                 <Field Id="Player Upgrades" Index="1"/>
             </Upgrade>
         </Instances>
-        <Instances Id="Gold Chalice4">
+        <Instances Id="Gold Chalice">
             <GameLink GameLink="CCGoldenChalice">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -2980,14 +3524,14 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Gold Chalice4_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Gold Chalice_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Gold Chalice4_Description">
+            <Text Text="UserData/ContingencyContracts/Gold Chalice_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="InfEnergy 3">
+        <Instances Id="InfEnergy">
             <GameLink GameLink="HandofInfinity">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3000,28 +3544,28 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/InfEnergy 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/InfEnergy_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/InfEnergy 3_Description">
+            <Text Text="UserData/ContingencyContracts/InfEnergy_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Resource drain 2">
+        <Instances Id="Resource drain">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Resource drain 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Resource drain_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Resource drain 2_Description">
+            <Text Text="UserData/ContingencyContracts/Resource drain_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Booster 1">
+        <Instances Id="Booster">
             <GameLink GameLink="CCAfterburners">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -3034,20 +3578,20 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Booster 1_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Booster_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Booster 1_Description">
+            <Text Text="UserData/ContingencyContracts/Booster_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Sandevistan 2">
+            <User Type="ContingencyContracts" Instance="Sandevistan">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Laevateinn 3">
+            <User Type="ContingencyContracts" Instance="Laevateinn">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="KineticBoost 2">
+        <Instances Id="KineticBoost">
             <GameLink GameLink="CCSpeedAtkBooster">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3060,14 +3604,14 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/KineticBoost 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/KineticBoost_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/KineticBoost 2_Description">
+            <Text Text="UserData/ContingencyContracts/KineticBoost_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Surviver Pact 4">
+        <Instances Id="Surviver Pact">
             <GameLink GameLink="SurviversPactVeteran">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3080,14 +3624,14 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Surviver Pact 4_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Surviver Pact_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Surviver Pact 4_Description">
+            <Text Text="UserData/ContingencyContracts/Surviver Pact_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Chrono CWAL 3">
+        <Instances Id="Chrono CWAL">
             <GameLink GameLink="ChronoCWAL">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3100,14 +3644,14 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Chrono CWAL 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Chrono CWAL_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Chrono CWAL 3_Description">
+            <Text Text="UserData/ContingencyContracts/Chrono CWAL_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="InstSalvage 2">
+        <Instances Id="InstSalvage">
             <GameLink GameLink="CCInstantSalvage">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -3123,20 +3667,20 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/InstSalvage 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/InstSalvage_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/InstSalvage 2_Description">
+            <Text Text="UserData/ContingencyContracts/InstSalvage_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="Bullettime 2">
+            <User Type="ContingencyContracts" Instance="Bullettime">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="VoidDomain 3">
+            <User Type="ContingencyContracts" Instance="VoidDomain">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="BlackCrown 3">
+        <Instances Id="BlackCrown">
             <GameLink GameLink="CCCivilightEterna">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3149,14 +3693,14 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/BlackCrown 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/BlackCrown_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/BlackCrown 3_Description">
+            <Text Text="UserData/ContingencyContracts/BlackCrown_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="VoidDomain 3">
+        <Instances Id="VoidDomain">
             <GameLink GameLink="CCVoidDomain">
                 <Field Id="Associated Ability"/>
             </GameLink>
@@ -3172,32 +3716,38 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/VoidDomain 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/VoidDomain_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/VoidDomain 3_Description">
+            <Text Text="UserData/ContingencyContracts/VoidDomain_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="InstSalvage 2">
+            <User Type="ContingencyContracts" Instance="InstSalvage">
                 <Field Id="Turnoff Contracts"/>
             </User>
-            <User Type="ContingencyContracts" Instance="Bullettime 2">
+            <User Type="ContingencyContracts" Instance="Bullettime">
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="Collapsal 3">
+        <Instances Id="Collapsal">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="3">
+            <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Collapsal 3_Contract Name">
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Collapsal_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Collapsal 3_Description">
+            <Text Text="UserData/ContingencyContracts/Collapsal_Description">
                 <Field Id="Description"/>
             </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
         </Instances>
         <Instances Id="HPdown2">
             <GameLink GameLink="InitialFragilityII">
@@ -3239,7 +3789,7 @@
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Enemyfast 2">
+        <Instances Id="Enemyfast">
             <GameLink GameLink="SubjectiveDilation">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3249,10 +3799,10 @@
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Enemyfast 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Enemyfast_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Enemyfast 2_Description">
+            <Text Text="UserData/ContingencyContracts/Enemyfast_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
@@ -3319,7 +3869,7 @@
                 <Field Id="Turnoff Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="ResourcePickup 2">
+        <Instances Id="ResourcePickup">
             <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
@@ -3329,10 +3879,10 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/ResourcePickup 2_Description">
+            <Text Text="UserData/ContingencyContracts/ResourcePickup_Description">
                 <Field Id="Description"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/ResourcePickup 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/ResourcePickup_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
         </Instances>
@@ -3481,7 +4031,7 @@
                 <Field Id="Turnoff Contracts" Index="3"/>
             </User>
         </Instances>
-        <Instances Id="InstantArmory 1">
+        <Instances Id="InstantArmory">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3497,37 +4047,14 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/InstantArmory 1_Contract Name">
+            <Text Text="UserData/ContingencyContracts/InstantArmory_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/InstantArmory 1_Description">
+            <Text Text="UserData/ContingencyContracts/InstantArmory_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="BlackUnit 2">
-            <Int Int="1">
-                <Field Id="Availability"/>
-            </Int>
-            <Int Int="2">
-                <Field Id="Contract Level"/>
-            </Int>
-            <Int Int="1">
-                <Field Id="Research Type"/>
-            </Int>
-            <Int Int="1">
-                <Field Id="Special Flags" Index="2"/>
-            </Int>
-            <Text Text="UserData/ContingencyContracts/BlackUnit 2_Contract Name">
-                <Field Id="Contract Name"/>
-            </Text>
-            <Text Text="UserData/ContingencyContracts/BlackUnit 2_Description">
-                <Field Id="Description"/>
-            </Text>
-            <User Type="CCGameplayElements" Instance="[Default]">
-                <Field Id="Require Element"/>
-            </User>
-        </Instances>
-        <Instances Id="ObjProtection 1">
+        <Instances Id="ObjProtection">
             <Int Int="1">
                 <Field Id="Contract Level"/>
             </Int>
@@ -3537,17 +4064,17 @@
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/ObjProtection 1_Contract Name">
+            <Text Text="UserData/ContingencyContracts/ObjProtection_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/ObjProtection 1_Description">
+            <Text Text="UserData/ContingencyContracts/ObjProtection_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="ContingencyContracts" Instance="Pacifist 5">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="Thrasher 3">
+        <Instances Id="Thrasher">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3557,14 +4084,14 @@
             <Int Int="1">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Thrasher 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Thrasher_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Thrasher 3_Description">
+            <Text Text="UserData/ContingencyContracts/Thrasher_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="TimedVirus 3">
+        <Instances Id="TimedVirus">
             <GameLink GameLink="VirusTimedLife">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3577,27 +4104,24 @@
             <Int Int="1">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/TimedVirus 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/TimedVirus_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/TimedVirus 3_Description">
+            <Text Text="UserData/ContingencyContracts/TimedVirus_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="EnemyPurifier 3">
-            <Int Int="1">
-                <Field Id="Availability"/>
-            </Int>
+        <Instances Id="EnemyPurifier">
             <Int Int="1">
                 <Field Id="Research Type"/>
             </Int>
             <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/EnemyPurifier 3_Description">
+            <Text Text="UserData/ContingencyContracts/EnemyPurifier_Description">
                 <Field Id="Description"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/EnemyPurifier 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/EnemyPurifier_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
             <Upgrade Upgrade="CCEnemyPurifierUnits">
@@ -3607,27 +4131,27 @@
                 <Field Id="Require Contracts"/>
             </User>
         </Instances>
-        <Instances Id="BurrowAmbush 2">
+        <Instances Id="BurrowAmbush">
             <GameLink GameLink="CCBurrowAmbushBurrowed">
                 <Field Id="Associated Behavior"/>
             </GameLink>
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="2">
+            <Int Int="1">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="2">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/BurrowAmbush 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/BurrowAmbush_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/BurrowAmbush 2_Description">
+            <Text Text="UserData/ContingencyContracts/BurrowAmbush_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="NetherCreep 3">
+        <Instances Id="NetherCreep">
             <GameLink GameLink="CCNetherCreep">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3640,17 +4164,17 @@
             <Int Int="2">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/NetherCreep 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/NetherCreep_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/NetherCreep 3_Description">
+            <Text Text="UserData/ContingencyContracts/NetherCreep_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="K5CreepBonuses">
                 <Field Id="Enemy Upgrade"/>
             </Upgrade>
         </Instances>
-        <Instances Id="FactionMengsk 4">
+        <Instances Id="FactionMengsk">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3660,17 +4184,17 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/FactionMengsk 4_Contract Name">
+            <Text Text="UserData/ContingencyContracts/FactionMengsk_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/FactionMengsk 4_Description">
+            <Text Text="UserData/ContingencyContracts/FactionMengsk_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="TacArsenal 1">
+            <User Type="ContingencyContracts" Instance="TacArsenal">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="TacArsenal 1">
+        <Instances Id="TacArsenal">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3680,20 +4204,20 @@
             <Int Int="1">
                 <Field Id="Contract Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/TacArsenal 1_Contract Name">
+            <Text Text="UserData/ContingencyContracts/TacArsenal_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/TacArsenal 1_Description">
+            <Text Text="UserData/ContingencyContracts/TacArsenal_Description">
                 <Field Id="Description"/>
             </Text>
             <Upgrade Upgrade="CCTacticalArsenalUnlockAll">
                 <Field Id="Player Upgrades"/>
             </Upgrade>
-            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+            <User Type="ContingencyContracts" Instance="FactionMengsk">
                 <Field Id="Turnoff Contracts"/>
             </User>
         </Instances>
-        <Instances Id="MengskTopbar 3">
+        <Instances Id="MengskTopbar">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3706,13 +4230,13 @@
             <Int Int="2">
                 <Field Id="Special Flags" Index="1"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/MengskTopbar 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/MengskTopbar_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/MengskTopbar 3_Description">
+            <Text Text="UserData/ContingencyContracts/MengskTopbar_Description">
                 <Field Id="Description"/>
             </Text>
-            <User Type="ContingencyContracts" Instance="FactionMengsk 4">
+            <User Type="ContingencyContracts" Instance="FactionMengsk">
                 <Field Id="Require Contracts"/>
             </User>
             <User Type="ContingencyContracts" Instance="[Default]">
@@ -3722,11 +4246,34 @@
                 <Field Id="Require Contracts" Index="1"/>
             </User>
         </Instances>
-        <Instances Id="GreatSilence 3">
+        <Instances Id="BlackUnit">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
-            <Int Int="3">
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/BlackUnit_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/BlackUnit_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="GreatSilence">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="4">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
@@ -3735,10 +4282,10 @@
             <Int Int="2">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/GreatSilence 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/GreatSilence_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/GreatSilence 3_Description">
+            <Text Text="UserData/ContingencyContracts/GreatSilence_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="ContingencyContracts" Instance="[Default]">
@@ -3751,7 +4298,7 @@
                 <Field Id="Require Contracts" Index="2"/>
             </User>
         </Instances>
-        <Instances Id="AntiGravity 3">
+        <Instances Id="GammaStorm">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
@@ -3761,14 +4308,82 @@
             <Int Int="1">
                 <Field Id="Special Flags" Index="2"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/AntiGravity 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/GammaStorm_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/AntiGravity 3_Description">
+            <Text Text="UserData/ContingencyContracts/GammaStorm_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="BadLoad 3">
+        <Instances Id="AntiGravity">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/AntiGravity_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/AntiGravity_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="ScorchSun">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/ScorchSun_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/ScorchSun_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="FlashFreeze">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/FlashFreeze_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/FlashFreeze_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="ClimateChaos">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="2"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/ClimateChaos_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/ClimateChaos_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="BadLoad">
             <GameLink GameLink="CCUltramarineOrb">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3781,14 +4396,14 @@
             <Int Int="3">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/BadLoad 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/BadLoad_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/BadLoad 3_Description">
+            <Text Text="UserData/ContingencyContracts/BadLoad_Description">
                 <Field Id="Description"/>
             </Text>
         </Instances>
-        <Instances Id="Solar Lance 3">
+        <Instances Id="Solar Lance">
             <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
@@ -3798,51 +4413,54 @@
             <Int Int="1">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Solar Lance 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Solar Lance_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Solar Lance 3_Description">
+            <Text Text="UserData/ContingencyContracts/Solar Lance_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="CCGameplayElements" Instance="[Default]">
                 <Field Id="Require Element"/>
             </User>
         </Instances>
-        <Instances Id="FlashFreeze 3">
-            <Int Int="1">
-                <Field Id="Availability"/>
-            </Int>
-            <Int Int="3">
+        <Instances Id="BanProduction 2">
+            <Int Int="2">
                 <Field Id="Contract Level"/>
             </Int>
             <Int Int="1">
-                <Field Id="Special Flags" Index="2"/>
+                <Field Id="Availability"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/FlashFreeze 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/BanProduction 2_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/FlashFreeze 3_Description">
+            <Text Text="UserData/ContingencyContracts/BanProduction 2_Description">
                 <Field Id="Description"/>
             </Text>
+            <User Type="ContingencyContracts" Instance="BanProduction 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
         </Instances>
-        <Instances Id="MonoBattle 3">
+        <Instances Id="BanProduction 3">
             <Int Int="1">
                 <Field Id="Availability"/>
             </Int>
             <Int Int="3">
                 <Field Id="Contract Level"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/MonoBattle 3_Contract Name">
+            <Text Text="UserData/ContingencyContracts/BanProduction 3_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/MonoBattle 3_Description">
+            <Text Text="UserData/ContingencyContracts/BanProduction 3_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="CCGameplayElements" Instance="[Default]">
                 <Field Id="Require Element"/>
             </User>
+            <User Type="ContingencyContracts" Instance="BanProduction 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
         </Instances>
-        <Instances Id="Infestation 2">
+        <Instances Id="Infestation">
             <GameLink GameLink="CCVolatileInfestationInfestable">
                 <Field Id="Associated Behavior"/>
             </GameLink>
@@ -3855,10 +4473,10 @@
             <Int Int="2">
                 <Field Id="Research Type"/>
             </Int>
-            <Text Text="UserData/ContingencyContracts/Infestation 2_Contract Name">
+            <Text Text="UserData/ContingencyContracts/Infestation_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
-            <Text Text="UserData/ContingencyContracts/Infestation 2_Description">
+            <Text Text="UserData/ContingencyContracts/Infestation_Description">
                 <Field Id="Description"/>
             </Text>
             <User Type="CCGameplayElements" Instance="[Default]">
@@ -3878,6 +4496,9 @@
             <Text Text="UserData/ContingencyContracts/EnemyWave 2_Contract Name">
                 <Field Id="Contract Name"/>
             </Text>
+            <User Type="ContingencyContracts" Instance="EnemyWave 3">
+                <Field Id="Turnoff Contracts"/>
+            </User>
         </Instances>
         <Instances Id="EnemyWave 3">
             <Int Int="1">
@@ -3895,6 +4516,230 @@
             <User Type="CCGameplayElements" Instance="[Default]">
                 <Field Id="Require Element"/>
             </User>
+            <User Type="ContingencyContracts" Instance="EnemyWave 2">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="PrimalDrop">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/PrimalDrop_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/PrimalDrop_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="LeviDrop">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="LeviDrop">
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/LeviDrop_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/LeviDrop_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="PrimalDrop">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="ScreenFlip">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/ScreenFlip_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/ScreenFlip_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="GuardianShell">
+            <GameLink GameLink="CCGuardianShellProc">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/GuardianShell_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/GuardianShell_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="EvoStrain">
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Research Type"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/EvoStrain_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/EvoStrain_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="Hflash">
+            <GameLink GameLink="CCHeliumFlash">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Hflash_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Hflash_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="IonCannon">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="IonCannon">
+            <GameLink GameLink="CCIonCannon">
+                <Field Id="Associated Ability"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="1"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/IonCannon_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/IonCannon_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Hflash">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+        </Instances>
+        <Instances Id="Atkdownearly">
+            <GameLink GameLink="CCatkdownearly">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Atkdownearly_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Atkdownearly_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="ContingencyContracts" Instance="Atkdownlate">
+                <Field Id="Turnoff Contracts"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Pacifist 5">
+                <Field Id="Turnoff Contracts" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Cooldown">
+            <GameLink GameLink="CCCooldown">
+                <Field Id="Associated Behavior"/>
+            </GameLink>
+            <Int Int="2">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/Cooldown_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/Cooldown_Description">
+                <Field Id="Description"/>
+            </Text>
+            <User Type="CCGameplayElements" Instance="[Default]">
+                <Field Id="Require Element"/>
+            </User>
+        </Instances>
+        <Instances Id="SuperCivilian">
+            <Int Int="1">
+                <Field Id="Availability"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Contract Level"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Contract Type"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Special Flags" Index="3"/>
+            </Int>
+            <Text Text="UserData/ContingencyContracts/SuperCivilian_Contract Name">
+                <Field Id="Contract Name"/>
+            </Text>
+            <Text Text="UserData/ContingencyContracts/SuperCivilian_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Upgrade Upgrade="CCSuperCivilian">
+                <Field Id="Player Upgrades"/>
+            </Upgrade>
         </Instances>
     </CUser>
     <CUser id="CCFactionStructureMappings">
@@ -4746,6 +5591,251 @@
             <Unit Unit="SeabornBeauty">
                 <Field Id="Unit" Index="9"/>
             </Unit>
+        </Instances>
+    </CUser>
+    <CUser id="CCTechRestrictions">
+        <Fields Id="Ability Command" Type="AbilCmd" EditorColumn="2"/>
+        <Fields>
+            <Id value="Contract"/>
+            <Type value="User"/>
+            <UserType value="ContingencyContracts"/>
+            <Count value="10"/>
+            <EditorColumn value="6"/>
+        </Fields>
+        <Fields Id="Unit" Type="Unit" EditorColumn="3"/>
+        <Fields Id="Campaign ID" Type="Int" EditorColumn="1"/>
+        <Fields Id="MissionCount" Type="Int" EditorColumn="4"/>
+        <Fields>
+            <Id value="Flags"/>
+            <Type value="Int"/>
+            <Count value="5"/>
+            <EditorColumn value="7"/>
+        </Fields>
+        <Fields Id="Upgrade" Type="Upgrade" EditorColumn="5"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="QuickDisable">
+            <Int Int="1">
+                <Field Id="Flags"/>
+            </Int>
+        </Instances>
+        <Instances Id="QuickDisableEmerg">
+            <Int Int="1">
+                <Field Id="Flags"/>
+            </Int>
+        </Instances>
+        <Instances Id="Firebat">
+            <AbilCmd Abil="MengskMercTrain" Cmd="3">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Surviver Pact">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="1"/>
+            </User>
+        </Instances>
+        <Instances Id="Bunker">
+            <AbilCmd Abil="TerranBuild" Cmd="6">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Supply_Down">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="2"/>
+            </User>
+        </Instances>
+        <Instances Id="Reaper">
+            <AbilCmd Abil="BarracksTrain" Cmd="1">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Gold Chalice">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="WoL3m">
+            <Int Int="3">
+                <Field Id="MissionCount"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Calldown Hyperion">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Solar Lance">
+                <Field Id="Contract" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Starport">
+            <AbilCmd Abil="TerranBuild" Cmd="11">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="BanProduction 2">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="WoL6m">
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="MissionCount"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="ClimateChaos">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="AntiGravity">
+                <Field Id="Contract" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="GammaStorm">
+                <Field Id="Contract" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="[Default]">
+                <Field Id="Contract" Index="3"/>
+            </User>
+        </Instances>
+        <Instances Id="Thor">
+            <AbilCmd Abil="FactoryTrain" Cmd="4">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Calldown Odin">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="Factory">
+            <AbilCmd Abil="TerranBuild" Cmd="10">
+                <Field Id="Ability Command"/>
+            </AbilCmd>
+            <Int Int="1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <User Type="ContingencyContracts" Instance="Booster">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="UltramarineOrb">
+            <Int Int="-1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <Upgrade Upgrade="CCHaveUltramarineOrb">
+                <Field Id="Upgrade"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="BadLoad">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="BlackCrown">
+            <Int Int="-1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <Upgrade Upgrade="CCHaveBlackCrown">
+                <Field Id="Upgrade"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="BlackCrown">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="InfEnergy">
+            <Int Int="-1">
+                <Field Id="Campaign ID"/>
+            </Int>
+            <Upgrade Upgrade="CCHaveInfEnergy">
+                <Field Id="Upgrade"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="InfEnergy">
+                <Field Id="Contract"/>
+            </User>
+        </Instances>
+        <Instances Id="DisableWhenNoBuild">
+            <User Type="ContingencyContracts" Instance="BanProduction 3">
+                <Field Id="Contract" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="BanProduction 2">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Chrono CWAL">
+                <Field Id="Contract" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Supply_Down">
+                <Field Id="Contract" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="EnemyWave 2">
+                <Field Id="Contract" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="EnemyWave 3">
+                <Field Id="Contract" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Hflash">
+                <Field Id="Contract" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Resource drain">
+                <Field Id="Contract" Index="7"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="TimedVirus">
+                <Field Id="Contract" Index="9"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Infestation">
+                <Field Id="Contract" Index="8"/>
+            </User>
+        </Instances>
+        <Instances Id="DisableWhenNoBuild2">
+            <User Type="ContingencyContracts" Instance="LeviDrop">
+                <Field Id="Contract"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Nuke_follow">
+                <Field Id="Contract" Index="1"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Vespene Effeciency">
+                <Field Id="Contract" Index="2"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Reactors">
+                <Field Id="Contract" Index="3"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="Orbital Drops">
+                <Field Id="Contract" Index="4"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="PrimalDrop">
+                <Field Id="Contract" Index="5"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="NightmareExpand">
+                <Field Id="Contract" Index="6"/>
+            </User>
+            <User Type="ContingencyContracts" Instance="NightmareWave">
+                <Field Id="Contract" Index="7"/>
+            </User>
+        </Instances>
+        <Instances Id="VoidDomain">
+            <Upgrade Upgrade="CCHaveVoidDomain">
+                <Field Id="Upgrade"/>
+            </Upgrade>
+            <User Type="ContingencyContracts" Instance="VoidDomain">
+                <Field Id="Contract"/>
+            </User>
         </Instances>
     </CUser>
 </Catalog>

@@ -145,6 +145,12 @@
     <CUnit id="CarrierAiur">
         <RepairTime value="60"/>
     </CUnit>
+    <CUnit id="Civilian">
+        <BehaviorArray Link="CCSuperCivilianUpscale"/>
+    </CUnit>
+    <CUnit id="CivilianFemale">
+        <BehaviorArray Link="CCSuperCivilianUpscale"/>
+    </CUnit>
     <CUnit id="ColonistTransport">
         <FlagArray index="ArmySelect" value="1"/>
         <Food value="-3"/>
@@ -168,8 +174,22 @@
         <RepairTime value="50"/>
     </CUnit>
     <CUnit id="CommandCenterMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="14" Column="4"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="4"/>
         </CardLayouts>
     </CUnit>
     <!--                                                                                         -->
@@ -184,9 +204,7 @@
         <RepairTime value="25"/>
     </CUnit>
     <CUnit id="DiamondbackMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="13" removed="1"/>
-        </CardLayouts>
+        <CardLayouts/>
     </CUnit>
     <!--                                                                                         -->
     <!-- Defiler ............................................................................... -->
@@ -211,24 +229,24 @@
         <BehaviorArray Link="VoidDetectorRadar"/>
     </CUnit>
     <CUnit id="GhostMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="9" Face="GhostMengskVeterancy" AbilCmd="" Requirements="" Row="1" Column="0"/>
-            <LayoutButtons index="10" Face="GhostMengskIrradiateBigDamage" Type="AbilCmd" AbilCmd="GhostMengskIrradiateBigDamage,Execute" Row="2" Column="1"/>
-            <LayoutButtons index="11" Face="GhostMengskIrradiateSmallDamage" AbilCmd="GhostMengskIrradiateSmallDamage,Execute"/>
-            <LayoutButtons index="12" Face="WeaponsFreeMengsk" AbilCmd="GhostMengskWeaponsFree,Execute" Row="1" Column="3"/>
-            <LayoutButtons index="13" Face="GhostMengskEMPLongStun" AbilCmd="GhostMengskEMPLongStun,Execute" Row="2" Column="2"/>
-            <LayoutButtons index="14">
-                <Face value="GhostMengskEMPShortStun"/>
-                <Type value="AbilCmd"/>
-                <AbilCmd value="GhostMengskEMPShortStun,Execute"/>
-                <Requirements value=""/>
-                <Row value="2"/>
-                <Column value="2"/>
-            </LayoutButtons>
-            <LayoutButtons index="15" Face="GhostMengskImperialMandateGeneration" Type="Passive" AbilCmd="" Row="1" Column="1"/>
-            <LayoutButtons index="16" Face="GhostMengskSuperCloak" Type="Passive" AbilCmd="" Requirements="GhostMengskSuperCloakUse" Column="3"/>
-            <LayoutButtons index="17" removed="1"/>
-            <LayoutButtons index="18" removed="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="GhostMengskVeterancy" Row="1" Column="0"/>
+            <LayoutButtons Face="GhostMengskIrradiateBigDamage" Type="AbilCmd" AbilCmd="GhostMengskIrradiateBigDamage,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="GhostMengskIrradiateSmallDamage" AbilCmd="GhostMengskIrradiateSmallDamage,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="WeaponsFreeMengsk" AbilCmd="GhostMengskWeaponsFree,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="GhostMengskEMPLongStun" AbilCmd="GhostMengskEMPLongStun,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GhostMengskEMPShortStun" Type="AbilCmd" AbilCmd="GhostMengskEMPShortStun,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GhostMengskImperialMandateGeneration" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="GhostMengskSuperCloak" Type="Passive" Requirements="GhostMengskSuperCloakUse" Row="0" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="GiantYeti">
@@ -591,23 +609,46 @@
         </ReviveInfoBase>
     </CUnit>
     <CUnit id="SCVMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="12" Face="Spray" AbilCmd="SprayTerran,Execute" Row="2" Column="3"/>
-            <LayoutButtons index="13" Face="SCVMengskAdvancedConstruction" Type="Passive" AbilCmd="" Row="1" Column="2"/>
-            <LayoutButtons index="14" Face="TrooperMengskEnlist" Type="AbilCmd" AbilCmd="SCVMengskEnlist,Execute" Column="3"/>
-            <LayoutButtons index="15" Column="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="Spray" AbilCmd="SprayTerran,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="SCVMengskAdvancedConstruction" Type="Passive" Row="1" Column="2"/>
+            <LayoutButtons Face="TrooperMengskEnlist" Type="AbilCmd" AbilCmd="SCVMengskEnlist,Execute" Row="0" Column="3"/>
+            <LayoutButtons Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SOAMothershipv4">
         <RepairTime value="90"/>
     </CUnit>
     <CUnit id="ScienceVesselMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="6" Face="NanoRepairMengsk" AbilCmd="NanoRepairMengsk,Execute" Row="2" Column="1"/>
-            <LayoutButtons index="7" Face="ElectricForceFieldMengsk" AbilCmd="ElectricForceFieldMengsk,Execute" Column="4"/>
-            <LayoutButtons index="8" Face="MengskRoyalGuardRegenerativeBioSteel" Type="Passive" AbilCmd="" Requirements="HaveMengskRoyalGuardRegenerativeBioSteel"/>
-            <LayoutButtons index="14" Face="ObserverTargetLockMengsk" Type="AbilCmd" AbilCmd="ObserverTargetLockMengsk,Execute"/>
-            <LayoutButtons index="15" Face="Detector" Requirements="" Row="1" Column="2"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="NanoRepairMengsk" AbilCmd="NanoRepairMengsk,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="ElectricForceFieldMengsk" AbilCmd="ElectricForceFieldMengsk,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MengskRoyalGuardRegenerativeBioSteel" Type="Passive" Requirements="HaveMengskRoyalGuardRegenerativeBioSteel" Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="ObserverTargetLockMengsk" Type="AbilCmd" AbilCmd="ObserverTargetLockMengsk,Execute" Row="0" Column="0"/>
+            <LayoutButtons Face="Detector" Row="1" Column="2"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="Scourge">
@@ -627,13 +668,35 @@
         <RepairTime value="15"/>
     </CUnit>
     <CUnit id="SiegeTankMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="11" Row="2" Column="3"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="2" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SiegeTankMengskSieged">
-        <CardLayouts index="0">
-            <LayoutButtons index="11" Row="2" Column="3"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="2" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="SlaynElemental">
@@ -694,36 +757,70 @@
         <Attributes index="Heroic" value="1"/>
     </CUnit>
     <CUnit id="TrooperMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="8">
-                <Face value="TrooperMengskBuild"/>
-                <Type value="Submenu"/>
-                <AbilCmd value=""/>
-                <SubmenuCardId value="0002"/>
-                <Row value="2"/>
-                <Column value="0"/>
-            </LayoutButtons>
-            <LayoutButtons index="9" Face="SCVMengskAdvancedConstruction" Type="Passive" SubmenuCardId="" Row="1" Column="2"/>
-            <LayoutButtons index="10" Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Column="3"/>
-            <LayoutButtons index="11" Column="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="TrooperMengskBuild" Type="Submenu" SubmenuCardId="0002" Row="2" Column="0"/>
+            <LayoutButtons Face="SCVMengskAdvancedConstruction" Type="Passive" Row="1" Column="2"/>
+            <LayoutButtons Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Row="0" Column="3"/>
+            <LayoutButtons Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="TrooperMengskAA">
-        <CardLayouts index="0">
-            <LayoutButtons index="10" Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Requirements=""/>
-            <LayoutButtons index="12" Face="TrooperMengskImperialMandateGeneration" Type="Passive" AbilCmd="" Requirements="HavePropagandaBlastMengsk" Column="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="TrooperMengskImperialMandateGeneration" Type="Passive" Requirements="HavePropagandaBlastMengsk" Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="TrooperMengskFlamethrower">
-        <CardLayouts index="0">
-            <LayoutButtons index="10" Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Requirements=""/>
-            <LayoutButtons index="12" Face="TrooperMengskImperialMandateGeneration" Type="Passive" AbilCmd="" Requirements="HavePropagandaBlastMengsk" Column="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="TrooperMengskImperialMandateGeneration" Type="Passive" Requirements="HavePropagandaBlastMengsk" Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="TrooperMengskImproved">
-        <CardLayouts index="0">
-            <LayoutButtons index="10" Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Requirements=""/>
-            <LayoutButtons index="12" Face="TrooperMengskImperialMandateGeneration" Type="Passive" AbilCmd="" Requirements="HavePropagandaBlastMengsk" Column="1"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="SCVMengskEnlist" Type="AbilCmd" AbilCmd="TrooperMengskEnlist,Execute" Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="TrooperMengskImperialMandateGeneration" Type="Passive" Requirements="HavePropagandaBlastMengsk" Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="TychusChaingun">
@@ -754,17 +851,38 @@
         <Attributes index="Heroic" value="1"/>
     </CUnit>
     <CUnit id="VikingMengskAssault">
-        <CardLayouts index="0">
-            <LayoutButtons index="13" Row="2" Column="3"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="2" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="VikingMengskFighter">
-        <CardLayouts index="0">
-            <LayoutButtons index="8" Face="VikingMengskImperialMandateGeneration" Requirements="" Column="1"/>
-            <LayoutButtons index="9" Face="VikingMengskAttackDamage" Behavior="VikingMengskAttackDamageCooldown" Requirements="HaveVikingMengskAttackDamageCooldown" Column="2"/>
-            <LayoutButtons index="10" Behavior="" Requirements="HaveMengskVeterancyVikingMengskLevel3"/>
-            <LayoutButtons index="11" Face="MengskRoyalGuardRegenerativeBioSteel" Requirements="HaveMengskRoyalGuardRegenerativeBioSteel" Row="2" Column="4"/>
-            <LayoutButtons index="12" Face="VikingMengskSpeed" Requirements="HaveVikingMengskSpeed" Column="3"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Face="VikingMengskImperialMandateGeneration" Row="0" Column="1"/>
+            <LayoutButtons Face="VikingMengskAttackDamage" Behavior="VikingMengskAttackDamageCooldown" Requirements="HaveVikingMengskAttackDamageCooldown" Row="0" Column="2"/>
+            <LayoutButtons Requirements="HaveMengskVeterancyVikingMengskLevel3" Row="0" Column="0"/>
+            <LayoutButtons Face="MengskRoyalGuardRegenerativeBioSteel" Requirements="HaveMengskRoyalGuardRegenerativeBioSteel" Row="2" Column="4"/>
+            <LayoutButtons Face="VikingMengskSpeed" Requirements="HaveVikingMengskSpeed" Row="0" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="VoidRayShakuras">
@@ -845,8 +963,20 @@
         <BehaviorArray Link="VoidDetectorRadar"/>
     </CUnit>
     <CUnit id="WraithMengsk">
-        <CardLayouts index="0">
-            <LayoutButtons index="12" Row="2" Column="3"/>
+        <CardLayouts>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="0" Column="0"/>
+            <LayoutButtons Row="2" Column="3"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="Yeti">
@@ -894,6 +1024,8 @@
             <LayoutButtons Face="CCInstantSalvage" Type="AbilCmd" AbilCmd="CCInstantSalvage,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="CCBulletTime" Type="AbilCmd" AbilCmd="CCBulletTime,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="CCVoidDomain" Type="AbilCmd" AbilCmd="CCVoidDomain,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="CCHeliumFlash" Type="AbilCmd" AbilCmd="CCHeliumFlash,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="CCPulseIonCannon" Type="AbilCmd" AbilCmd="CCIonCannon,Execute" Row="1" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="CCNukeDetonateDummy">
@@ -1023,6 +1155,8 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <BehaviorArray Link="Run"/>
+        <BehaviorArray Link="CCSuperCivilianUpscale"/>
     </CUnit>
     <CUnit id="CCCivilianFemale">
         <DeathRevealRadius value="3"/>
@@ -1074,6 +1208,8 @@
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
         <SelectAlias value="CCCivilian"/>
+        <BehaviorArray Link="Run"/>
+        <BehaviorArray Link="CCSuperCivilianUpscale"/>
     </CUnit>
     <CUnit id="Egg">
         <Attributes index="User1" value="1"/>

@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CAbilTrain id="BarracksMengskTrain">
-        <InfoArray index="Train1" Effect="" Location="Source"/>
-        <InfoArray index="Train2" Effect="" Location="Source"/>
-        <InfoArray index="Train3" Effect="" Location="Source"/>
-        <InfoArray index="Train4" Effect="" Location="Source"/>
-        <InfoArray index="Train5" Effect="" Location="Source"/>
-    </CAbilTrain>
-    <CAbilTrain id="FactoryMengskTrain">
-        <InfoArray index="Train1" Effect="" Location="Source"/>
-        <InfoArray index="Train2" Effect="" Location="Source"/>
-        <InfoArray index="Train3" Effect="" Location="Source"/>
-        <InfoArray index="Train4" Effect="" Location="Source"/>
-        <InfoArray index="Train5" Effect="" Location="Source"/>
-        <InfoArray index="Train6" Effect="" Location="Source"/>
-    </CAbilTrain>
+    <CAbilTrain id="BarracksMengskTrain"/>
+    <CAbilEffectInstant id="CCIonCannon">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="CCIonCannonArmed"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeStart="120" TimeUse="180"/>
+        </Cost>
+        <AINotifyEffect value="CCAfterburners"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CCPulseIonCannon">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="CCHeliumFlash">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="HeliumFlashCP"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeStart="300" TimeUse="300"/>
+        </Cost>
+        <Range value="500"/>
+        <CursorEffect value="CCHeliumFlashSACenter"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CCHeliumFlash">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilTrain id="FactoryMengskTrain"/>
     <CAbilMorph id="CCColossusMorphPurifier">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="ColossusPurifier" Requirements="CCEnemyPurifierUnits"/>
@@ -42,7 +54,7 @@
         <Effect index="0" value="CCBulletTimeDummy"/>
         <Flags index="Transient" value="1"/>
         <Cost>
-            <Cooldown Location="Global" TimeUse="30"/>
+            <Cooldown TimeUse="30"/>
         </Cost>
         <AINotifyEffect value="CCAfterburners"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="CCBulletTime">
@@ -115,6 +127,12 @@
         <MaxCargoSize value="4"/>
         <LoadValidatorArray index="0" removed="1"/>
     </CAbilTransport>
+    <CAbilEffectTarget id="HotSBioPlasmidDischarge">
+        <Flags index="AutoCast" value="1"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Structure,Worker,Missile,Dead,Invulnerable"/>
+        <AutoCastRange value="9"/>
+        <AutoCastValidatorArray value="TargetLifeGE200"/>
+    </CAbilEffectTarget>
     <CAbilEffectInstant id="Laevateinn">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Flags index="Transient" value="1"/>
@@ -136,9 +154,7 @@
             <Flags index="CreateDefaultButton" value="1"/>
         </CmdButtonArray>
     </CAbilEffectInstant>
-    <CAbilEffectTarget id="NuclearAnnihilationMengsk">
-        <CmdButtonArray index="Execute" Requirements=""/>
-    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NuclearAnnihilationMengsk"/>
     <CAbilEffectTarget id="OdinNuclearStrike">
         <Cost index="0">
             <Charge>
@@ -184,7 +200,7 @@
         <InfoTooltipPriority value="1"/>
         <Flags index="Transient" value="1"/>
         <Cost>
-            <Vital index="Life" value="10"/>
+            <VitalFraction index="Life" value="0.2"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="CCSandevistan">
             <Flags index="ToSelection" value="1"/>

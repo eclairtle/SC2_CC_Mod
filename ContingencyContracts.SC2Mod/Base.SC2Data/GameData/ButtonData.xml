@@ -5,6 +5,11 @@
         <Hotkey value="Button/Hotkey/AuxiliaryAbilityHolder"/>
         <HotkeyAlias value="AuxiliaryAbility"/>
     </CButton>
+    <CButton id="CCPulseIonCannon">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-orbitaldrop.dds"/>
+        <Hotkey value="Button/Hotkey/SuperweaponAbility"/>
+        <HotkeyAlias value="SuperweaponAbility"/>
+    </CButton>
     <CButton id="CCInstantSalvage">
         <Icon value="Assets\Textures\btn-ability-terran-salvage.dds"/>
         <Hotkey value="Button/Hotkey/AuxiliaryAbilityHolder"/>
@@ -23,6 +28,9 @@
     <CButton id="AuxiliaryAbility">
         <Icon value="Assets\Textures\btn-ability-terran-lockon.dds"/>
         <Hotkey value="Button/Hotkey/AuxiliaryAbilityHolder"/>
+    </CButton>
+    <CButton id="SuperweaponAbility">
+        <Icon value="Assets\Textures\orbitalstrike_coop.dds"/>
     </CButton>
     <CButton id="CalldownOdin">
         <Icon value="Assets\Textures\btn-unit-terran-odin.dds"/>
@@ -83,5 +91,9 @@
         <HotkeyAlias value="CCTacticalGear"/>
         <Universal value="1"/>
         <DefaultButtonLayout Row="1" Column="4" CardId="1"/>
+    </CButton>
+    <CButton id="CCHeliumFlash">
+        <Icon value="Assets\Textures\btn-techupgrade-terran-empround.dds"/>
+        <HotkeyAlias value="SuperweaponAbility"/>
     </CButton>
 </Catalog>

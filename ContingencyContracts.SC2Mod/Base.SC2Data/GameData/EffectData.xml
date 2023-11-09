@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="CCIonCannonArmed">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="CCBurrowAmbush">
         <EditorCategories value=""/>
     </CEffectApplyBehavior>
@@ -14,6 +18,49 @@
             <ChangeFraction value="1"/>
         </VitalArray>
     </CEffectModifyUnit>
+    <CEffectSet id="CCGammaStormSet">
+        <EditorCategories value=""/>
+        <EffectArray value="CCGammaStormU"/>
+        <EffectArray value="CCGammaStormMU"/>
+        <EffectArray value="CCGammaStormStun"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="CCGravitonBeamGroundtoAir">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="CCGravitonBeamAirtoGround">
+        <EditorCategories value=""/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="CCGravitonStormSwitch">
+        <ValidatorArray value="CCGravitonBeamnotActive"/>
+        <EditorCategories value=""/>
+        <Chance value="0.1"/>
+        <CaseArray Validator="AirandNotGroundUnit" Effect="CCGravitonBeamAirtoGround"/>
+        <CaseDefault value="CCGravitonBeamGroundtoAir"/>
+    </CEffectSwitch>
+    <CEffectDamage id="CCHeliumFlashCenterDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <ArmorReduction value="0"/>
+        <Kind value="NoProc"/>
+        <Amount value="240"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="CCHeliumFlashSACenter">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable,MapBoss"/>
+        <AreaArray Radius="10" Effect="CCHeliumFlashCenterDamage"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="CCHeliumFlashSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable,MapBoss"/>
+        <AreaArray Radius="500" Effect="CCHeliumFlashDamage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="CCHeliumFlashSet">
+        <EditorCategories value=""/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <EffectArray value="CCHeliumFlashSACenter"/>
+        <EffectArray value="CCHeliumFlashSA"/>
+    </CEffectSet>
     <CEffectSet id="CCInfestationSet">
         <EditorCategories value=""/>
         <EffectArray value="CCVolatileInfestation"/>
@@ -187,6 +234,14 @@
         <Flags index="NoVitalAbsorbEnergy" value="1"/>
         <Flags index="NoDamageTimerReset" value="1"/>
     </CEffectDamage>
+    <CEffectDamage id="CCGammaStormU">
+        <ValidatorArray value="BiologicalorHasShields"/>
+        <EditorCategories value=""/>
+        <Flags index="Live" value="1"/>
+        <Flags index="NoKillCredit" value="1"/>
+        <Amount value="1"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
     <CEffectDamage id="CCVoidDomainInstantKill1HP" parent="DU_WEAP">
         <LaunchLocation Value="TargetUnit"/>
         <ImpactLocation Value="SourceUnit"/>
@@ -202,6 +257,12 @@
         <ArmorReduction value="0"/>
         <Kind value="NoProc"/>
         <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="CCHeliumFlashDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <ArmorReduction value="0"/>
+        <Kind value="NoProc"/>
+        <Amount value="80"/>
     </CEffectDamage>
     <CEffectSet id="CCVoidDomainInstantKillSet">
         <EditorCategories value=""/>
@@ -278,6 +339,38 @@
     <CEffectApplyBehavior id="CCInfestedTerranTimedLife">
         <EditorCategories value="Race:Zerg"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="CCScorchingSunU">
+        <EditorCategories value=""/>
+        <Amount value="1"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="CCGravitonBeamPullDown">
+        <EditorCategories value="Race:Terran"/>
+        <Height value="-3"/>
+        <HeightTime value="0.5"/>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="CCGammaStormMU">
+        <EditorCategories value="Race:Terran"/>
+        <VitalArray index="Energy">
+            <Change value="-1"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectApplyBehavior id="CCGammaStormStun">
+        <ValidatorArray index="0" value="IsMechanical"/>
+        <ValidatorArray value="NotFrenzied"/>
+        <EditorCategories value="Race:Terran"/>
+        <Chance value="0.1"/>
+        <Behavior value="CCGammaStormStunned"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="HeliumFlashCP">
+        <EditorCategories value=""/>
+        <ExpireDelay value="27"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="CCHeliumFlashSet"/>
+        <PeriodicPeriodArray value="3"/>
+        <RevealRadius value="64"/>
+        <RevealFlags index="Unfog" value="1"/>
+    </CEffectCreatePersistent>
     <CEffectCreatePersistent id="NuclearAnnihilationMengskBigNukeDropDelayCP">
         <PeriodicEffectArray value="NuclearAnnihilationMengskSwitch"/>
     </CEffectCreatePersistent>
@@ -300,6 +393,11 @@
         <EffectArray value="PickupMinerals50"/>
         <EffectArray value="PickupRemove"/>
     </CEffectSet>
+    <CEffectModifyUnit id="CCGravitonBeamBackUp">
+        <EditorCategories value="Race:Terran"/>
+        <Height value="3"/>
+        <HeightTime value="1"/>
+    </CEffectModifyUnit>
     <CEffectApplyBehavior id="RoachCorpserApplyBehavior">
         <ValidatorArray index="0" value="CasterIsRoachCorpser"/>
     </CEffectApplyBehavior>
@@ -314,6 +412,17 @@
         <ImpactEffect value="CCGriffonDamage"/>
         <AmmoUnit value="CCGriffonWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="CCGuardianShellApply">
+        <ValidatorArray index="0" value="NotHallucination"/>
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="CCGuardianShell"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="CCGuardianShellWeaknessApply">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="CCRecentlyProtected"/>
+    </CEffectApplyBehavior>
     <CEffectSet id="SandevistanShadowCreateSet">
         <EditorCategories value=""/>
         <EffectArray value="SandevistanShadowSetFacing"/>
@@ -612,5 +721,16 @@
         <ExcludeArray Value="Target"/>
         <SearchFilters value="-;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
+    </CEffectDamage>
+    <CEffectDamage id="CCIonCannonDamage">
+        <EditorCategories value="Race:Terran"/>
+        <AttributeFactor index="MapBoss" value="-0.5"/>
+        <Visibility value="Visible"/>
+        <Flags index="Notification" value="1"/>
+        <Amount value="60"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="1" Fraction="1"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
 </Catalog>

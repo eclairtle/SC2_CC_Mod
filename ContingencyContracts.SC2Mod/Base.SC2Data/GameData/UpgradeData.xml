@@ -10,6 +10,60 @@
     <CUpgrade id="CCEnemyPurifierUnits">
         <Flags index="UpgradeCheat" value="0"/>
         <LeaderAlias value="CCBulletTimeInEffect"/>
+        <EffectArray Operation="Set" Reference="Abil,GatewayTrain,InfoArray[Train1].Unit[0]" Value="ZealotPurifier"/>
+    </CUpgrade>
+    <CUpgrade id="CCEnemyEvoStrains">
+        <Flags index="UpgradeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CCMindhawkGauntlet">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,Raynor01,LifeMax" Value="45"/>
+        <EffectArray Operation="Set" Reference="Unit,Raynor01,LifeArmor" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,Raynor01,LifeStart" Value="45"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,RaynorGaussRifle,Range" Value="1"/>
+        <EffectArray Operation="Divide" Reference="Effect,RaynorGaussRifleDamage,Amount" Value="2"/>
+        <EffectArray Operation="Set" Reference="Unit,Raynor01,Name" Value="Unit/Name/Jaynor01"/>
+        <EffectArray Operation="Set" Reference="Actor,Raynor,HighlightTooltip" Value="Unit/Name/Jaynor01"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+        <LeaderAlias value="CCGravitonStormActive"/>
+    </CUpgrade>
+    <CUpgrade id="CCHaveBlackCrown">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+        <LeaderAlias value="CCScorchingSunActive"/>
+    </CUpgrade>
+    <CUpgrade id="CCHaveInfEnergy">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+        <LeaderAlias value="CCScorchingSunActive"/>
+    </CUpgrade>
+    <CUpgrade id="CCHaveUltramarineOrb">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+        <LeaderAlias value="CCScorchingSunActive"/>
+    </CUpgrade>
+    <CUpgrade id="CCHaveVoidDomain">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+        <LeaderAlias value="CCScorchingSunActive"/>
+    </CUpgrade>
+    <CUpgrade id="CCSuperCivilian">
+        <Flags index="UpgradeCheat" value="0"/>
+        <LeaderAlias value="CCRSNuke"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CCCivilian,LifeMax" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CCCivilian,LifeStart" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CCCivilianFemale,LifeMax" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CCCivilianFemale,LifeStart" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Civilian,LifeMax" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,Civilian,LifeStart" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CivilianFemale,LifeMax" Value="4.3"/>
+        <EffectArray Operation="Multiply" Reference="Unit,CivilianFemale,LifeStart" Value="4.3"/>
+        <EffectArray Reference="Weapon,CCThrowMolotov,RateMultiplier" Value="3.3"/>
+        <EffectArray Reference="Weapon,ThrowMolotov,RateMultiplier" Value="3.3"/>
+    </CUpgrade>
+    <CUpgrade id="CCScorchingSunActive">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="CCGoldenChaliceStacks">
         <Flags index="UpgradeCheat" value="0"/>
@@ -17,6 +71,14 @@
         <EffectArray Reference="Behavior,CCGoldenChalice,Modification.AdditiveMoveSpeedFactor" Value="0.1"/>
         <EffectArray Reference="Behavior,CCGoldenChalice,Modification.DecelerationMultiplier" Value="0.1"/>
         <MaxLevel value="20"/>
+    </CUpgrade>
+    <CUpgrade id="CCGravitonStormActive">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="CCGammaStormActive">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EditorCategories value="UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="CCUltramarineOrbStacks">
         <Flags index="UpgradeCheat" value="0"/>
@@ -30,7 +92,7 @@
         <EffectArray Reference="Behavior,CCUltramarineOrb,Modification.DamageTakenFraction[Ranged]" Value="0.2"/>
         <EffectArray Reference="Behavior,CCUltramarineOrb,Modification.DamageTakenFraction[Spell]" Value="0.2"/>
         <EffectArray Reference="Behavior,CCUltramarineOrb,Modification.DamageTakenFraction[Splash]" Value="0.2"/>
-        <MaxLevel value="10"/>
+        <MaxLevel value="5"/>
         <LeaderAlias value="CCGoldenChaliceStacks"/>
     </CUpgrade>
     <CUpgrade id="CCRSNuke">
@@ -69,7 +131,22 @@
     </CUpgrade>
     <CUpgrade id="CCFlashFreezeActive">
         <Flags index="UpgradeCheat" value="0"/>
-        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <EditorCategories value="UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="CCAttackDownTimeProgress">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,CCatkdownlate,Modification.DamageDealtFraction[Melee]" Value="0.05"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,CCatkdownlate,Modification.DamageDealtFraction[NoProc]" Value="0.05"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,CCatkdownlate,Modification.DamageDealtFraction[Ranged]" Value="0.05"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,CCatkdownlate,Modification.DamageDealtFraction[Spell]" Value="0.05"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,CCatkdownlate,Modification.DamageDealtFraction[Splash]" Value="0.05"/>
+        <EffectArray Reference="Behavior,CCatkdownearly,Modification.DamageDealtFraction[Melee]" Value="0.03"/>
+        <EffectArray Reference="Behavior,CCatkdownearly,Modification.DamageDealtFraction[NoProc]" Value="0.03"/>
+        <EffectArray Reference="Behavior,CCatkdownearly,Modification.DamageDealtFraction[Ranged]" Value="0.03"/>
+        <EffectArray Reference="Behavior,CCatkdownearly,Modification.DamageDealtFraction[Spell]" Value="0.03"/>
+        <EffectArray Reference="Behavior,CCatkdownearly,Modification.DamageDealtFraction[Splash]" Value="0.03"/>
+        <MaxLevel value="10"/>
+        <LeaderAlias value="CCGoldenChaliceStacks"/>
     </CUpgrade>
     <CUpgrade id="OrbitalStrike">
         <EffectArray Operation="Set" Reference="Abil,BarracksMengskTrain,InfoArray[Train1].Effect" Value="DropTrainSet"/>

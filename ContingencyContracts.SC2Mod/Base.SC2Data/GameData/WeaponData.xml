@@ -48,6 +48,6 @@
     </CWeaponStrafe>
     <CWeaponLegacy id="ThrowMolotov">
         <RandomDelayMin value="-0.0625"/>
-        <RandomDelayMax value="2"/>
+        <RandomDelayMax value="1.5"/>
     </CWeaponLegacy>
 </Catalog>

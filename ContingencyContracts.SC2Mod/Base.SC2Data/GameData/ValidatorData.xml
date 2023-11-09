@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorCombine id="BiologicalorHasShields">
+        <CombineArray value="hasShields"/>
+        <CombineArray value="UnitIsBiological"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="CCGravitonBeamnotActive">
+        <Type value="And"/>
+        <CombineArray value="NoCCGravitonBeamAirtoGround"/>
+        <CombineArray value="NoCCGravitonBeamGroundtoAir"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NoCCGravitonBeamAirtoGround">
+        <Behavior value="CCGravitonBeamAirtoGround"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoCCGravitonBeamGroundtoAir">
+        <Behavior value="CCGravitonBeamGroundtoAir"/>
+    </CValidatorUnitCompareBehaviorCount>
     <CValidatorUnitFilters id="CCIsMassive">
         <Filters value="Massive;-"/>
     </CValidatorUnitFilters>
@@ -31,6 +46,18 @@
         <WhichUnit Value="Caster"/>
         <Value value="RoachCorpser"/>
     </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="CCGravitonStorm">
+        <Compare value="GT"/>
+        <Behavior value="CCGravitonTurbulance"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="AirandNotGroundUnit">
+        <Filters value="Air;Ground"/>
+    </CValidatorUnitFilters>
+    <CValidatorPlayerRequirement id="HaveSOAHeroicShield2">
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="HaveSOAHeroicShield"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareVital id="LifeGE12HP">
         <ResultFailed value="TooMuchLife"/>
         <Compare value="GE"/>
@@ -43,9 +70,9 @@
     <CValidatorCombine id="MULEUnitCheck">
         <Type value="Or"/>
     </CValidatorCombine>
-    <CValidatorLocationEnumArea id="CCNoNearbyAlliesRad2" parent="HostileSearchEmpty">
+    <CValidatorLocationEnumArea id="CCNoNearbyAlliesRad1" parent="HostileSearchEmpty">
         <WhichLocation Value="TargetUnit"/>
-        <AreaArray Radius="2"/>
+        <AreaArray Radius="1"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
         <SearchFilters value="Visible;Self,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Hallucination"/>
     </CValidatorLocationEnumArea>
@@ -55,9 +82,13 @@
     <CValidatorUnitCompareBehaviorCount id="NotCCAlreadyFragilized">
         <Behavior value="CCAlreadyFragilized"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="NotHaveHeroicShieldCleanUp2">
+        <ResultNoPlayer value="Error"/>
+        <Value value="HaveHeroicShieldCleanUp"/>
+    </CValidatorPlayerRequirement>
     <CValidatorPlayerRequirement id="SandevistanCap">
         <Find value="1"/>
-        <Value value="SandevistanCap"/>
+        <Value value="CCSandevistanCap"/>
     </CValidatorPlayerRequirement>
     <CValidatorUnitCompareSpeed id="TargetNotStationary">
         <Compare value="NE"/>
@@ -149,4 +180,7 @@
         <Value value="1"/>
         <Vital value="Energy"/>
     </CValidatorUnitCompareVital>
+    <CValidatorUnitFilters id="TargetnotWorkerFilter">
+        <Filters value="-;Worker"/>
+    </CValidatorUnitFilters>
 </Catalog>

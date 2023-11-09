@@ -54,12 +54,28 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeCCFlashFreezeActiveCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="CCFlashFreezeActive" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCCGammaStormActiveCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CCGammaStormActive" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCCGravitonStormActiveCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CCGravitonStormActive" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeCCRSNukeCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="CCRSNuke" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCCScorchingSunActiveCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CCScorchingSunActive" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCCSuperCivilianCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="CCSuperCivilian" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementLT id="LTCountBehaviorProductionStructureIdentifierCompleteOnly2">
         <OperandArray index="0" value="CountBehaviorProductionStructureIdentifierCompleteOnly"/>

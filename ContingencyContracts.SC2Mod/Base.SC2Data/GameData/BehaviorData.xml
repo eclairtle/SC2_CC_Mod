@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="CCCooldown">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalRegenMultiplier index="Energy" value="-0.3"/>
+            <RateMultiplierArray index="Charge" value="0.7"/>
+            <RateMultiplierArray index="Cooldown" value="0.7"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="CCBurrowAmbush" parent="Detector">
         <Alignment value="Positive"/>
         <InfoIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
@@ -29,6 +40,125 @@
         <Duration value="0.0625"/>
         <ExpireEffect value="CCFactionSwapPlayerUnitDummy"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="CCGravitonBeamAirtoGround">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CCGravitonStorm"/>
+        <Duration value="5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <HeightTime index="Start" value="1"/>
+            <HeightTime index="Stop" value="0.25"/>
+            <AbilLinkEnableArray value="TerranBuild"/>
+            <AbilLinkEnableArray value="MorphToSwarmHostMP"/>
+            <AbilLinkEnableArray value="WidowMineUnburrow"/>
+            <AbilLinkEnableArray value="BurrowLurkerMPUp"/>
+            <BehaviorClassDisableArray index="CBehaviorCreepSource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorPowerSource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorResource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorSpawn" value="1"/>
+            <PlaneDelta index="Ground" value="1"/>
+            <PlaneDelta index="Air" value="-1"/>
+        </Modification>
+        <InitialEffect value="CCGravitonBeamPullDown"/>
+        <FinalEffect value="CCGravitonBeamBackUp"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCGravitonTurbulance">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-gravitonbeam.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="NotInvulnerable"/>
+        <DisableValidatorArray value="TargetnotWorkerFilter"/>
+        <RemoveValidatorArray value="NotFrenzied"/>
+        <TimeScaleSource Value="Global"/>
+        <Period value="1.4"/>
+        <InitialEffect value="CCGravitonStormSwitch"/>
+        <PeriodicEffect value="CCGravitonStormSwitch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCGravitonBeamGroundtoAir">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CCGravitonStorm"/>
+        <Duration value="5"/>
+        <Modification Height="3.75">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <HeightTime index="Start" value="1"/>
+            <HeightTime index="Stop" value="0.25"/>
+            <AbilLinkEnableArray value="TerranBuild"/>
+            <AbilLinkEnableArray value="MorphToSwarmHostMP"/>
+            <AbilLinkEnableArray value="WidowMineUnburrow"/>
+            <AbilLinkEnableArray value="BurrowLurkerMPUp"/>
+            <BehaviorClassDisableArray index="CBehaviorCreepSource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorPowerSource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorResource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorSpawn" value="1"/>
+            <PlaneDelta index="Ground" value="-1"/>
+            <PlaneDelta index="Air" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCIonCannonArmed">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <AbilLinkDisableArray value="CCIonCannon"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCLeviathanBuff">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Zerg"/>
+        <Modification Detect="9">
+            <VitalMaxFractionArray index="Life" value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCLeviathanDeployStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="3"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCPrimalDropDummy">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="6"/>
+        <FinalEffect value="Suicide"/>
+        <DamageResponse ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCGammaStorm">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CCGammaStormActive"/>
+        <DisableValidatorArray value="NotInvulnerable"/>
+        <DisableValidatorArray value="TargetnotWorkerFilter"/>
+        <Period value="1"/>
+        <PeriodicEffect value="CCGammaStormSet"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="CCSolarLanceDummy">
         <InfoFlags index="Hidden" value="1"/>
         <Duration value="5"/>
@@ -36,6 +166,11 @@
         <DamageResponse ModifyFraction="0">
             <Chance value="1"/>
         </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCSuperCivilianUpscale">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CCSuperCivilian"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CCUltramarineOrb">
         <Alignment value="Negative"/>
@@ -127,8 +262,9 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\ui_hots_icon_flashfreeze.dds"/>
         <Requirements value="CCFlashFreezeActive"/>
-        <DisableValidatorArray value="CCNoNearbyAlliesRad2"/>
+        <DisableValidatorArray value="CCNoNearbyAlliesRad1"/>
         <DisableValidatorArray value="NotFrenzied"/>
+        <DisableValidatorArray value="TargetnotWorkerFilter"/>
         <DisableValidatorArray value="NotInvulnerable"/>
         <TimeScaleSource Value="Global"/>
         <Modification SightMaximum="6">
@@ -152,6 +288,11 @@
             <BehaviorLinkDisableArray value="makeCreep4x4Enhanced"/>
             <BehaviorLinkDisableArray value="ZergBuildingNotOnCreep"/>
         </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCatkdownlate">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-a.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="CCVolatileInfestationInfestable">
         <InfoFlags index="Hidden" value="1"/>
@@ -185,6 +326,32 @@
             <BehaviorLinkDisableArray value="CCVolatileInfestationInfestable"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="CCGammaStormStunned">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification>
+            <ModifyFlags index="Reveal" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCatkdownearly">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-mechbioweaponupgrades-a.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="-0.45"/>
+            <DamageDealtFraction index="Melee" value="-0.45"/>
+            <DamageDealtFraction index="Ranged" value="-0.45"/>
+            <DamageDealtFraction index="Splash" value="-0.45"/>
+            <DamageDealtFraction index="NoProc" value="-0.45"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="GreatSilence">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
@@ -205,10 +372,64 @@
             <StateFlags index="Summoned" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="CCPrecursorPrimalDrop">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="4"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCScorchingSun">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Requirements value="CCScorchingSunActive"/>
+        <DisableValidatorArray value="SourceIsStationary"/>
+        <DisableValidatorArray value="NotInvulnerable"/>
+        <DisableValidatorArray value="TargetnotWorkerFilter"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="CCScorchingSunU"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ProductionStructureIdentifier" parent="Detector">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
         <DisableValidatorArray value="NotHiddenSelf"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCGuardianShell">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-guardianshell.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <ExpireEffect value="CCGuardianShellWeaknessApply"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCGuardianShellProc">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-shield-protoss-plasmashields.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Fatal="1" Handled="CCGuardianShellApply" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CCRecentlyProtected">
+        <Alignment value="Negative"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-tomahawkpowercell.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <BehaviorLinkDisableArray value="CCGuardianShellProc"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="VirusTimedLife" parent="Detector">
         <InfoFlags index="Hidden" value="1"/>
@@ -349,6 +570,10 @@
         <Modification MoveSpeedMultiplier="2" AttackSpeedMultiplier="2"/>
         <Period value="0.125"/>
         <PeriodicEffect value="SandevistanCreateShadow"/>
+        <DamageResponse ModifyFraction="0">
+            <Kind index="NoProc" value="0"/>
+            <Chance value="0.5"/>
+        </DamageResponse>
     </CBehaviorBuff>
     <CBehaviorBuff id="TorrasqueDontDie">
         <DisableValidatorArray index="1" removed="1"/>
