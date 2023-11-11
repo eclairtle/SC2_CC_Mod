@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAccumulatorArithmetic id="Add1">
+        <Parameters value="1"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorVitals id="CCInitialFragilityIIILife">
+        <Ratio value="0.4"/>
+        <UnitSource Value="Target"/>
+    </CAccumulatorVitals>
+    <CAccumulatorVitals id="CCInitialFragilityIIIShields">
+        <Ratio value="0.4"/>
+        <VitalType value="Shields"/>
+        <UnitSource Value="Target"/>
+    </CAccumulatorVitals>
+    <CAccumulatorSwitch id="CCSpeedSwitch">
+        <CaseArray Validator="SpeedGE2" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE3" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE4" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE5" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE6" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE7" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE8" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE9" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE10" Accumulator="Add1" FallThrough="1"/>
+        <CaseArray Validator="SpeedGE11" Accumulator="Add1" FallThrough="1"/>
+        <SourceEffect value="CCSpeedAtkBoosts"/>
+    </CAccumulatorSwitch>
+    <CAccumulatorVitals id="CCInitialFragilityIILife">
+        <Ratio value="0.6"/>
+        <UnitSource Value="Target"/>
+    </CAccumulatorVitals>
+    <CAccumulatorVitals id="CCInitialFragilityIIShields">
+        <Ratio value="0.6"/>
+        <VitalType value="Shields"/>
+        <UnitSource Value="Target"/>
+    </CAccumulatorVitals>
+</Catalog>

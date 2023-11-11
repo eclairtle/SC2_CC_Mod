@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTargetFindEffect id="BioStasisSearch">
+        <Effect value="HotSBioStasisSearchArea"/>
+    </CTargetFindEffect>
+    <CTargetFindBestPoint id="BioStasisBestPoint">
+        <Flags index="EvaluateCmd" value="1"/>
+        <DamageBase value="40"/>
+        <Effect value="HotSBioStasisSearchArea"/>
+        <MinCount value="5"/>
+        <MinScore value="2.5"/>
+    </CTargetFindBestPoint>
+    <CTargetFindSet id="BioStasis">
+        <Type value="Sequential"/>
+        <Array value="BioStasisSearch"/>
+        <Array value="BioStasisBestPoint"/>
+    </CTargetFindSet>
+</Catalog>
