@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<StyleFile>
-    <Style name="CC_ContractName" template="StandardTooltip" font="UI\Fonts\bl.ttf" height="15" vjustify="Middle" hjustify="Center" styleflags="Shadow" textcolor="255,174,255,174 - 255,183,255,183" highlightcolor="255,128,255,128" disabledcolor="255,193,193,193 - 255,206,206,206" hotkeycolor="255,128,255,128" hyperlinkcolor="255,128,255,128" glowcolor="255,170,255,170" shadowoffset="2" outlinewidth="0"/>
-</StyleFile>
